@@ -1,0 +1,72 @@
+#header{
+    #navbar-nav{
+        font-family: 'Roboto', sans-serif;
+        .nav-link{
+            width: 25%;
+            cursor: pointer;
+            margin-right: 20px;
+            margin-left: 20px;
+            text-transform: uppercase;
+            color: black;
+            position: relative;
+            &:hover{
+                transition: 0.4s;
+                a{
+                    transition: 0.2s;
+                color: $mainColor;
+
+                }
+                &::before{
+                    width: 100%;
+                }    
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                background-color: $mainColor;
+                height: 2px;
+                width: 0;
+                left: 0;
+                bottom: -0px;
+                transition: 0.4s;
+
+            }
+        }
+        :nth-child(2){
+            a{
+            position: relative;
+            &::before{
+                position: absolute;
+                content: "Hot";
+                font-size: 8.5px;
+                color: white;
+                padding: 5px;
+                background-color: red;
+                top: -134%;
+                right: -5px;
+            }
+            &::after{
+                position: absolute;
+                content: "";
+                top:-14px;
+                right: 17px;
+                border-top: 6px solid transparent;
+                border-left: 5px solid red;
+                border-bottom: 5px solid transparent;
+            }
+         }
+
+        }
+    }
+    .currencies-login{
+        .list-inline{
+            .list-inline-item{
+                transition: 0.4s;
+                &:hover{
+                    cursor: pointer;
+                    color: $mainColor;
+                }
+            }
+        }
+    }
+}

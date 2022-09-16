@@ -1,0 +1,65 @@
+#header #navbar-nav {
+  font-family: "Roboto", sans-serif;
+}
+#header #navbar-nav .nav-link {
+  width: 25%;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-left: 20px;
+  text-transform: uppercase;
+  color: black;
+  position: relative;
+}
+#header #navbar-nav .nav-link:hover {
+  transition: 0.4s;
+}
+#header #navbar-nav .nav-link:hover a {
+  transition: 0.2s;
+  color: #83b735;
+}
+#header #navbar-nav .nav-link:hover::before {
+  width: 100%;
+}
+#header #navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  background-color: #83b735;
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: 0px;
+  transition: 0.4s;
+}
+#header #navbar-nav :nth-child(2) a {
+  position: relative;
+}
+#header #navbar-nav :nth-child(2) a::before {
+  position: absolute;
+  content: "Hot";
+  font-size: 8.5px;
+  color: white;
+  padding: 5px;
+  background-color: red;
+  top: -134%;
+  right: -5px;
+}
+#header #navbar-nav :nth-child(2) a::after {
+  position: absolute;
+  content: "";
+  top: -14px;
+  right: 17px;
+  border-top: 6px solid transparent;
+  border-left: 5px solid red;
+  border-bottom: 5px solid transparent;
+}
+#header .currencies-login .list-inline .list-inline-item {
+  transition: 0.4s;
+}
+#header .currencies-login .list-inline .list-inline-item:hover {
+  cursor: pointer;
+  color: #83b735;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}/*# sourceMappingURL=index.css.map */
