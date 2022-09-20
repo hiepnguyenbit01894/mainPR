@@ -1,0 +1,13 @@
+
+// Tablet
+@media  only screen and (max-width: 1200px){
+    #header{
+        .container-v1{
+            display: none;
+        }
+        .menuMoblie{
+            display: flex;
+        }
+    }
+    
+}

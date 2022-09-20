@@ -1,5 +1,6 @@
+
 @import "color";
+@import "mixin";
 @import "header";
-* {
-  font-family: "Roboto", sans-serif;
-}
+@import "slider";
+@import "media"

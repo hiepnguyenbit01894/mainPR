@@ -6,5 +6,6 @@ $(document).ready(function(){
         autoHeight:true,
         dots:false,
         autoplay: true,
+
     });
 })

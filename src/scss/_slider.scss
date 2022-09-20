@@ -1,0 +1,49 @@
+#slider{
+  font-family: "Roboto", sans-serif;
+  .owl-carousel{
+    width: 100%;
+    height: 90vh;
+  }
+  .item{
+    max-width: 100%;
+    height: auto;
+    .item_content{
+         left: 50%;
+         top: 45%;
+         min-width: 45%;
+         height: 44%;
+         z-index: 10;
+         transform: translate(-50%,-50%);
+         .wrap_content{
+             background: url(/src/image/bg_content.png);
+             background-size: contain;
+             background-repeat: no-repeat;
+             background-position: 50%;
+             height: 100%;
+             padding: 10% 18%;
+             letter-spacing: 2px;
+
+                .wrap_content--title{
+                    font-size: 50px;
+                    font-weight: 600;
+                    margin-bottom: 30px;
+                }
+                .wrap_content--para{
+                    color: $paraColor;
+                    margin-bottom: 50px;
+                }
+                .wrap_content--button{
+                    &:hover{
+                        transition: 0.4s;
+                        a{
+                            background-color: $mainColor;
+                        }
+                    }
+                    a{
+                        @include button;
+                    }
+                }
+            }
+        }
+    }
+}
