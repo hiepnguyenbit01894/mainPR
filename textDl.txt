@@ -1,0 +1,3 @@
+20/9: 
+- Hoàn thiện header (check)
+- chỉnh sửa phần slider

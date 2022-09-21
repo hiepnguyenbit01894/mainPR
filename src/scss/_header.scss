@@ -1,0 +1,406 @@
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.activeBody{
+    margin-top: 522px;
+    transition: all .5s ease;
+}
+#header{
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.4s;
+    .container-v1 {
+    #navbar-nav{
+        .nav-link{
+            cursor: pointer;
+            margin-right: 20px;
+            margin-left: 20px;
+            text-transform: uppercase;
+            color: black;
+            position: relative;
+            &:hover{
+                transition: 0.4s;
+                a{
+                    transition: 0.2s;
+                color: $mainColor;
+
+                }
+                &::before{
+                    width: 100%;
+                }    
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                background-color: $mainColor;
+                height: 2px;
+                width: 0;
+                left: 0;
+                bottom: -0px;
+                transition: 0.4s;
+
+            }
+        }
+        :nth-child(2){
+            .shopLink{
+            position: relative;
+            width: 100%;
+            &::before{
+                position: absolute;
+                content: "Hot";
+                font-size: 8.5px;
+                color: white;
+                padding: 5px;
+                background-color: red;
+                top: -122%;
+                right: -5px;
+            }
+            &::after{
+                position: absolute;
+                content: "";
+                top:-12px;
+                right: 17px;
+                border-top: 6px solid transparent;
+                border-left: 5px solid red;
+                border-bottom: 5px solid transparent;
+            }
+         }
+
+        }
+        
+    }
+        .currencies-login{
+            .list-inline{
+                .list-inline-item{
+                    width: 25px;
+                    height: 25px;
+                    transition: 0.4s;
+                    &:hover{
+                        cursor: pointer;
+                        color: $mainColor;
+                    }
+                }
+                .loginForm{
+                    position: relative;
+                    &:hover{
+                        .loginform_dropdown{
+                            opacity: 1;
+                            transition: all 0.5s ease;
+                            visibility: visible;
+                        }
+                    }
+                    .loginform_dropdown{
+                        position: absolute;
+                        left: -50px;
+                        z-index: 10;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: all 0.5s ease;
+
+                        .loginform_dropdown--main{
+                            margin-top: 20px;
+                            .loginform_item--Login,
+                            .loginform_item--Register
+                            {
+                                padding: 15px 30px;
+                                background-color: #fff;
+                                border: 1px solid #dedede;
+                                &:hover{
+                                    a{
+                                        color: $mainColor;
+                                        transition: 0.4s;
+                                    }
+                                }
+                            }
+                            .loginform_item--Login{
+                                border-top-left-radius: 5px;
+                                border-top-right-radius: 5px;
+                            }
+                            .loginform_item--Register{
+                                border-bottom-left-radius: 5px;
+                                border-bottom-right-radius: 5px;
+                            }
+                        }
+                    }
+                }
+                
+            }
+            
+        }
+    }
+
+    .menuMoblie{  
+        justify-content: space-between;
+        display: none;
+        padding: 15px;
+        background: #ffffff;
+        position: relative;
+        z-index: 2;
+        transition: background-color .5s ease 0s,padding .5s ease 0s; 
+        .menu_overlay{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 10;
+        }
+        .active{
+            visibility: visible;
+            transition: 0.3s all ease-in-out;
+        }
+        .menuMobile_logo{
+            margin-left: 30px;
+            .menuMobile_logo--main{
+                width: 100%;
+                text-align: center;
+                a{
+                    img{
+                        max-width: 30%;
+                        vertical-align: middle;
+                        border-style: none;
+                    }
+                }
+            }
+        }
+        .menuMobile_right{
+            display: flex;
+            span{
+                margin-right: 5px;
+            }
+        }
+    }
+    .navMobile{
+        position: fixed;
+        z-index: 11;
+        top: 0;
+        left: -320px;
+        width: 320px;
+        height: 100%;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.4s all ease;
+        .navMobile_logo{
+            display: flex;
+            justify-content: flex-end;
+            .logoMenu{
+                
+                margin: 20px 10px;
+            }
+        }
+        .navMobile_content{
+            .tabMenuMoblie_item{
+                display: flex;
+                padding: 20px 10px;
+                justify-content: space-between;
+                border: 1px solid #dedede;
+            }
+        }
+    }
+    .active{
+        left: 0;
+        opacity: 1;
+        visibility: visible;
+        transition: 0.4s all ease;
+    }
+    
+}
+// Header Hidden
+// SearchBar
+.searchBar{
+    font-family: 'Roboto',sans-serif;
+    z-index: 0;
+    .searchBar--main{
+    width: 100%;
+    height: 0%;
+    overflow: hidden;
+    position: fixed;
+    top: -522px;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 5;
+    transition: all 0.5s;
+    background-color: $bgColor;
+    padding-bottom: 50px;
+    }
+    .active{
+        height: auto;
+        transition: all 0.5s;
+        z-index: 101;
+        opacity: 1;
+        top:0;
+        padding-bottom: 50px;
+    }
+    .searchBar-title{
+        padding: 30px 15px;
+        transition: all -.5s ease;
+        display: block;
+        .searchBar-title--main{
+            font-size: 40px;
+            text-align: center;
+            color: #111111;
+            font-weight: 600;
+            margin-top: 0;
+            line-height: 1.2;
+            margin-bottom: 1em;
+
+        }
+        }
+    .searchBar-form{
+        width: 900px;
+        margin: 0 auto;
+        position: relative;
+        transition: all 0.6s linear;
+        .searchBar-form--input
+        {
+            font-family: 'Roboto',sans-serif;
+            height: 44px;
+                background-color: $bgColor;
+                color: #111111;
+                border: none;
+                border-bottom: 2px solid #e8e8e8;
+                line-height: 42px;
+                width: 100%;
+            }
+        .searchBar-form--button{
+            position: absolute;
+            top: 0;
+            right: 0;
+            color: #666;
+            font-size: 22px;
+            height: 43px;
+            width: 43px;
+            text-align: center;
+            padding: 0;
+            font-weight: 900;
+        }
+            
+    }
+    .searchBar--exit{
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 0;
+        cursor: pointer;
+    }
+    .searchBar--result{
+        width: 900px;
+        margin: auto;
+        max-width: 100%;
+        height: 260px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        margin-top: 20px;
+    }
+    // searchBar
+    .bgSearchBar {
+       width: 100vw;
+       height: 100vh;
+       background-color: rgba(0,0,0,.5);
+       top: -100%;
+       left: 0;
+       position: fixed;
+       z-index: 5;
+       opacity: 1;
+       visibility: hidden;
+       transition: all .5s ease;
+    }
+    .active{
+        top:0;
+        opacity: 1;
+        visibility: visible;
+        transition: all .5s ease;
+    }
+    
+}
+.cartBar,
+.wishBar{
+    font-family: 'roboto',sans-serif;
+    background-color: #f7f7f7;
+    z-index: 130;
+    height: 100%;
+    position: fixed;
+    right: -380px;
+    width: 380px;
+    top: 0;
+    transition: all 0.3s ease;
+    max-width: calc(100% - 20px);
+    .cartBar_main,
+    .wishBar_main{
+        .cartBar_main--head,
+        .wishBar_main--head{
+            border-bottom: 1px solid #dedede;
+            .cartBar_head--exit,
+            .cartBar_head--count,
+            .wishBar_head--exit,
+            .wishBar_head--count
+            {
+                font-weight: bold;
+                padding: 10px;
+                border: 1px solid #dedede;
+                border-bottom: none;
+            }
+            .cartBar_head--exit,
+            .wishBar_head--exit
+            {
+                cursor: pointer;
+            }
+            .cartBar_head--count,
+            .wishBar_head--count{
+                padding: 10px 14px;
+            }
+            .cartBar_head--title,
+            .wishBar_head--title{
+                font-size: 15px;
+                letter-spacing: 1px;
+                text-align: center;
+
+            }
+        }
+        .cartBar_main--body,
+        .wishBar_main--body{
+            .cartBar_body--image,
+            .wishBar_body--image{
+                margin-top: 180px;
+                img{
+                    width: 100%;
+                }
+            }
+            .cartBar_body--noti,
+            .wishBar_body--noti{
+                margin: 50px;
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center
+            }
+            .cartBar_body--tocart,
+            .wishBar_body--tocart{
+                @include button;
+                &:hover{
+                    background-color: $mainColor;
+                    transition: all 0.4s ease;
+                }
+            }
+        }
+    }
+    
+}
+.wishBar{
+    background-color: #fff;
+}
+.contentActive{
+    right: 0;
+}
+.bgcartBar,
+.bgwishBar{
+    @include bgblur;
+ }
+ .bgactive{
+     opacity: 1;
+     visibility: visible;
+     transition: all .5s ease;
+ }

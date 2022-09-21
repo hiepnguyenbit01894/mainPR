@@ -1,0 +1,32 @@
+#header #navbar-nav {
+  font-family: "Roboto", sans-serif;
+}
+#header #navbar-nav .nav-link {
+  width: 25%;
+  cursor: pointer;
+  margin-right: 50px;
+  text-transform: uppercase;
+  color: black;
+}
+#header #navbar-nav :nth-child(2) a {
+  position: relative;
+}
+#header #navbar-nav :nth-child(2) a::before {
+  position: absolute;
+  content: "Hot";
+  font-size: 8.5px;
+  color: white;
+  padding: 5px;
+  background-color: red;
+  top: -134%;
+  right: -5px;
+}
+#header #navbar-nav :nth-child(2) a::after {
+  position: absolute;
+  content: "";
+  top: -14px;
+  right: 17px;
+  border-top: 6px solid transparent;
+  border-left: 5px solid red;
+  border-bottom: 5px solid transparent;
+}/*# sourceMappingURL=header.css.map */
