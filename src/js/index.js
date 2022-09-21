@@ -14,10 +14,10 @@ $(document).ready(function() {
         $(body).toggleClass("activeBody")
     })
     searchExitButton.on ("click",function(){
-        searchbarMAin.toggleClass('active')
+        searchbarMAin.removeClass('active')
         header.style.marginTop = "0"
-        bgSearchBar.toggleClass('active')
-        $(body).toggleClass("activeBody")
+        bgSearchBar.removeClass('active')
+        $(body).removeClass("activeBody")
 
     })
     //toggle header cartBar

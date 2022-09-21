@@ -11,11 +11,10 @@ body{
     font-family: 'Roboto', sans-serif;
     transition: all 0.4s;
     .container-v1 {
+        display: none;
     #navbar-nav{
         .nav-link{
             cursor: pointer;
-            margin-right: 20px;
-            margin-left: 20px;
             text-transform: uppercase;
             color: black;
             position: relative;
@@ -73,9 +72,8 @@ body{
         .currencies-login{
             .list-inline{
                 .list-inline-item{
-                    width: 25px;
-                    height: 25px;
                     transition: 0.4s;
+                    margin-right: 0.5vw;
                     &:hover{
                         cursor: pointer;
                         color: $mainColor;
@@ -132,7 +130,7 @@ body{
 
     .menuMoblie{  
         justify-content: space-between;
-        display: none;
+        display: flex;
         padding: 15px;
         background: #ffffff;
         position: relative;
@@ -169,6 +167,49 @@ body{
             display: flex;
             span{
                 margin-right: 5px;
+            }
+        }
+        .loginForm{
+            position: relative;
+            &:hover{
+                .loginform_dropdown{
+                    opacity: 1;
+                    transition: all 0.5s ease;
+                    visibility: visible;
+                }
+            }
+            .loginform_dropdown{
+                position: absolute;
+                left: -50px;
+                z-index: 10;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.5s ease;
+
+                .loginform_dropdown--main{
+                    margin-top: 20px;
+                    .loginform_item--Login,
+                    .loginform_item--Register
+                    {
+                        padding: 15px 30px;
+                        background-color: #fff;
+                        border: 1px solid #dedede;
+                        &:hover{
+                            a{
+                                color: $mainColor;
+                                transition: 0.4s;
+                            }
+                        }
+                    }
+                    .loginform_item--Login{
+                        border-top-left-radius: 5px;
+                        border-top-right-radius: 5px;
+                    }
+                    .loginform_item--Register{
+                        border-bottom-left-radius: 5px;
+                        border-bottom-right-radius: 5px;
+                    }
+                }
             }
         }
     }

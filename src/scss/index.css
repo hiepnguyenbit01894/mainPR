@@ -11,10 +11,11 @@ body {
   font-family: "Roboto", sans-serif;
   transition: all 0.4s;
 }
+#header .container-v1 {
+  display: none;
+}
 #header .container-v1 #navbar-nav .nav-link {
   cursor: pointer;
-  margin-right: 20px;
-  margin-left: 20px;
   text-transform: uppercase;
   color: black;
   position: relative;
@@ -63,9 +64,8 @@ body {
   border-bottom: 5px solid transparent;
 }
 #header .container-v1 .currencies-login .list-inline .list-inline-item {
-  width: 25px;
-  height: 25px;
   transition: 0.4s;
+  margin-right: 0.5vw;
 }
 #header .container-v1 .currencies-login .list-inline .list-inline-item:hover {
   cursor: pointer;
@@ -111,7 +111,7 @@ body {
 }
 #header .menuMoblie {
   justify-content: space-between;
-  display: none;
+  display: flex;
   padding: 15px;
   background: #ffffff;
   position: relative;
@@ -148,6 +148,44 @@ body {
 }
 #header .menuMoblie .menuMobile_right span {
   margin-right: 5px;
+}
+#header .menuMoblie .loginForm {
+  position: relative;
+}
+#header .menuMoblie .loginForm:hover .loginform_dropdown {
+  opacity: 1;
+  transition: all 0.5s ease;
+  visibility: visible;
+}
+#header .menuMoblie .loginForm .loginform_dropdown {
+  position: absolute;
+  left: -50px;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+#header .menuMoblie .loginForm .loginform_dropdown .loginform_dropdown--main {
+  margin-top: 20px;
+}
+#header .menuMoblie .loginForm .loginform_dropdown .loginform_dropdown--main .loginform_item--Login,
+#header .menuMoblie .loginForm .loginform_dropdown .loginform_dropdown--main .loginform_item--Register {
+  padding: 15px 30px;
+  background-color: #fff;
+  border: 1px solid #dedede;
+}
+#header .menuMoblie .loginForm .loginform_dropdown .loginform_dropdown--main .loginform_item--Login:hover a,
+#header .menuMoblie .loginForm .loginform_dropdown .loginform_dropdown--main .loginform_item--Register:hover a {
+  color: #83b735;
+  transition: 0.4s;
+}
+#header .menuMoblie .loginForm .loginform_dropdown .loginform_dropdown--main .loginform_item--Login {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+#header .menuMoblie .loginForm .loginform_dropdown .loginform_dropdown--main .loginform_item--Register {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 #header .navMobile {
   position: fixed;
@@ -587,19 +625,78 @@ body {
   transition: 0.4s;
 }
 
-@media screen and (max-width: 768px) {
+#featured {
+  font-family: "roboto", sans-serif;
+}
+#featured .featured_title {
+  text-align: center;
+}
+#featured .featured_title .featured_title--main {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #111111;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  margin: 50px 0;
+}
+#featured .featured_body .owl-carousel .owl-stage .owl-item {
+  width: 150px;
+}
+#featured .featured_body .owl-carousel .owl-stage .owl-item .item img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 768px) {
   #header .container-v1 {
-    display: none;
+    display: block;
   }
   #header .menuMoblie {
-    display: flex;
+    display: none;
   }
 }
-@media screen and (min-width: 767px) {
-  #header .container-v1 {
-    display: none;
+@media screen and (min-width: 1024px) {
+  #header .container-v1 #navbar-nav .nav-link {
+    font-size: 18px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
-  #header .menuMoblie {
-    display: flex;
+  #header .container-v1 #navbar-nav :nth-child(2) .shopLink::after {
+    top: -18px;
+  }
+  #header .container-v1 .currencies-login .list-inline .list-inline-item {
+    padding-right: 0.1vw;
+  }
+  #header .container-v1 .currencies-login .list-inline .list-inline-item svg {
+    width: 23px;
+    height: 23px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .searchBar .searchBar-form,
+.searchBar .searchBar--result {
+    padding: 0 10px;
+  }
+  .cartBar,
+.wishBar {
+    width: 80%;
+    right: -80%;
+  }
+  .contentActive {
+    right: 0;
+  }
+  #slider .item .item_image {
+    height: 60vh;
+  }
+  #slider .item .item_content .wrap_content .wrap_content--title {
+    font-size: 3.7vw;
+  }
+  #slider .item .item_content .wrap_content .wrap_content--para {
+    font-size: 2.5vw;
+  }
+  #featured .featured_title .featured_title--main {
+    font-size: 3vh;
   }
 }/*# sourceMappingURL=index.css.map */

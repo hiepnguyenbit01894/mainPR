@@ -1,3 +1,5 @@
-20/9: 
-- Hoàn thiện header (check)
-- chỉnh sửa phần slider
+
+- Hoàn thiện header (v) 20/09/2022
+- Hoàn thiện slider(v) 21/09/2022
+- Hoàn thiện Featured products (..) 21/09/2022
+- Hoàn thiện Our Best Seller (..) 21/09/2022
