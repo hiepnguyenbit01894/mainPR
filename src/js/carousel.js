@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('.owl-carousel').owlCarousel({
+    $(".slider").owlCarousel({
         animateIn: 'fadeIn',
         animateOut: 'fadeOut',
         slideSpeed: 100,
@@ -10,14 +10,15 @@ $(document).ready(function(){
         autoplay: true,
         loop: true,
     });
-    $('.featured_body--main').owlCarousel({
+   $(".featured_body--main").owlCarousel({
         loop:true,
         margin:10,
         responsiveClass:true,
         autoWidth:true,
         dots:false,
         autoplay: true,
-
+        // nav:true,
+        navRewind: false,
         responsive:{
             0:{
                 items:1,
