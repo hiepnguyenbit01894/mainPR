@@ -86,4 +86,17 @@ $(document).ready(function() {
             $(body).removeClass("activeBody")
         }
     }
+    // toggle bestSeller part
+    const newArbutton = $("#taba1")
+    const newBsbutton = $("#taba2")
+    const tabContentA1 = $(".bestSeller_tabContent--a1")[0]
+    const tabContentA2 = $(".bestSeller_tabContent--a2")[0]
+    newArbutton.on("click",function(){
+        $(tabContentA1).addClass( 'activeTab')
+        $(tabContentA2).removeClass( 'activeTab')
+    })
+    newBsbutton.on("click",function(){
+        $(tabContentA2).addClass( 'activeTab')
+        $(tabContentA1).removeClass( 'activeTab')
+    })
 })

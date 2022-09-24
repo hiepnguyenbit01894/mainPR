@@ -3,20 +3,61 @@
   .featured_title {
     text-align: center;
     .featured_title--main {
-      font-size: 40px;
-      font-weight: 600;
-      line-height: 1.2;
-      color: $titColor;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      position: relative;
-      margin: 50px 0;
+      @include titMain;
     }
   }
   .featured_body {
     .owl-carousel {
       .owl-nav {
         display: none;
+      }
+    }
+    .featured_body--main{
+      .featured_main--item{
+        margin:0 15px;
+        &:hover{
+          .featured_main--image{
+          border: 8px solid $mainColor;
+          overflow: hidden;
+            a{
+              
+              img{
+              transition: all 0.5s ease-in-out;
+                transform: scale(1.19);
+              }
+            }
+          }
+          .featured_main--name{
+            a{
+
+              color: $mainColor;
+              transition: all 0.5s ease-in-out; 
+            }
+          }
+        }
+        .featured_main--image{
+          border: 8px solid #ddd;
+          border-radius: 50%;
+          transition: all 0.5s ease-in-out;
+          a{
+            img{
+              width: 100%;
+              border-radius: 100%;
+              height: auto;
+              object-fit: cover;
+              transition: all 0.5s ease-in-out;
+            }
+          }
+        }
+        .featured_main--name{
+          cursor: pointer;
+          padding: 50px 0;
+          text-align: center;
+          text-transform: uppercase;
+          font-weight: bold;
+          letter-spacing: 2px;
+          transition: all 0.5s ease-in-out;
+        }
       }
     }
   }

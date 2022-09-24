@@ -1,0 +1,194 @@
+#bestSeller{
+    font-family: 'roboto',sans-serif;
+    .bestSeller_title{
+        text-align: center;
+        .bestSeller_title--main{
+            @include titMain;
+        }
+    }
+    .fade{
+        transition: opacity 0.15s linear;
+    }
+    .bestSeller_options{
+        @include flex-Center;
+        margin-bottom: 50px;
+        
+        .bestSeller_options--item{
+            margin: 0px 20px;
+            &:hover{
+                a{
+                    color: $textColor;
+                    background-color: $mainColor;
+                    transition: all 0.5s ease;
+                }
+            }
+            a{
+                padding: 15px 30px;
+                color: $mainColor;
+                border:  1px solid $mainColor;
+                transition: all 0.5s ease;
+            }
+        }
+    }
+    .bestSeller_tabContent--a1,
+    .bestSeller_tabContent--a2{
+        display: none;
+        .row{
+            display: flex;
+        }
+        .bestSeller_tabContent--item{
+            position: relative;
+            margin-bottom: 20px;
+                .tabContent_item--image{
+                    img{
+                        width: 100%;
+                    }
+                }
+            &:hover{
+                .tabContent_item--options{
+                    bottom: 100px;
+                    visibility: visible;
+                    opacity: 1;
+                    transition: all 0.5s ease;
+                }
+            }
+            .tabContent_item--options{
+                position: absolute;
+                left: 0;
+                width: 100%;
+                bottom: 0;
+                visibility: hidden;
+                opacity: 0;
+                transition: all 0.5s ease;
+                .item_options--main{
+                    position: relative;
+                    width: 80%;
+                    margin: auto;
+                    height: 0px;
+                    top: -26px;
+                    left: 0;
+                    right: 0;
+                    transition: all 0.5s ease;
+                    @include flex-Jsaround;
+                    .item_options{
+                            position: relative;
+                            background-color: #fff;
+                            padding: 15px;
+                            border-radius: 50%;
+                            box-shadow:0 15px 25px rgba(27, 26, 26, 0.08);
+                            transition: all 0.5s ease-in-out;
+                            cursor: pointer;
+                            &:hover{
+                                background-color: $mainColor;
+                                .item_options--logo{
+                                    transition: all 0.5s ease-in-out;
+                                    color: $textColor;
+                                }
+                                #viewTitle,
+                                #wishTitle,
+                                #cartTitle
+                                {
+                                    visibility: visible;
+                                    opacity: 1;
+                                    transition: all 0.5s ease;
+                                }
+                            }
+                            .item_options--Title{
+                                position: absolute;
+                                background-color: black;
+                                border-radius: 5px;
+                                color: $textColor;
+                                text-align: center;
+                                opacity: 1;
+                            }
+                            #viewTitle{
+                                top: -79%;
+                                left: 1px;
+                                padding: 5px 10px;
+                                visibility: hidden;
+                                opacity: 0;
+                                transition: all 0.5s ease;
+                                &::before{
+                                    content: "";
+                                    position: absolute;
+                                    top: 93%;
+                                    left: 31%;
+                                    width: 0; 
+                                    height: 0; 
+                                    border-left: 8px solid transparent;
+                                    border-right: 8px solid transparent;
+                                    
+                                    border-top: 8px solid rgb(0, 0, 0);
+                                }
+                            }
+                            #wishTitle{
+                                top: -79%;
+                                left: -49px;
+                                width: 140px;
+                                padding: 5px 10px;
+                                visibility: hidden;
+                                opacity: 0;
+                                transition: all 0.5s ease;
+                                &::before{
+                                    content: "";
+                                    position: absolute;
+                                    top: 88%;
+                                    left: 46%;
+                                    width: 0; 
+                                    height: 0; 
+                                    border-left: 8px solid transparent;
+                                    border-right: 8px solid transparent;
+                                    
+                                    border-top: 8px solid rgb(0, 0, 0);
+                                }
+                            }
+                            #cartTitle{
+                                top: -79%;
+                                left: -49px;
+                                width: 140px;
+                                padding: 5px 10px;
+                                visibility: hidden;
+                                opacity: 0;
+                                transition: all 0.5s ease;
+                                &::before{
+                                    content: "";
+                                    position: absolute;
+                                    top: 88%;
+                                    left: 46%;
+                                    width: 0; 
+                                    height: 0; 
+                                    border-left: 8px solid transparent;
+                                    border-right: 8px solid transparent;
+                                    
+                                    border-top: 8px solid rgb(0, 0, 0);
+                                }
+                            }
+                }
+            }
+            }
+            .tabContent_item--name{
+
+                background-color: #f6f6f6;
+                font-size: 16px;
+                font-weight: 600;
+                padding-top: 20px;
+                letter-spacing: 1px;
+                padding-bottom: 10px;
+                text-align: center;
+            }
+            .tabContent_item--price{
+                background-color: #f6f6f6;
+                padding: 15px 0;
+                text-align: center;
+                font-size: 15px;
+                font-weight: 700;
+                color: $mainColor;
+            }
+        }
+        
+    }
+    .activeTab{
+        display: block
+    }
+    
+}

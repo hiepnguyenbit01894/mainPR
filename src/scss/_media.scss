@@ -43,6 +43,7 @@
       }
     }
   }
+ 
 
 }
   
@@ -84,6 +85,21 @@
     .featured_title{
       .featured_title--main{
         font-size: 3vh;
+      }
+    }
+  }
+  #bestSeller{
+    .bestSeller_title{
+      .bestSeller_title--main{
+        font-size: 3vh;
+      }
+    }
+    .bestSeller_options{
+      .bestSeller_options--item{
+        margin: 0 5px;
+        a{
+          padding: 10px 15px;
+        }
       }
     }
   }
