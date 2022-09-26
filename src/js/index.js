@@ -87,16 +87,11 @@ $(document).ready(function() {
         }
     }
     // toggle bestSeller part
-    const newArbutton = $("#taba1")
-    const newBsbutton = $("#taba2")
-    const tabContentA1 = $(".bestSeller_tabContent--a1")[0]
-    const tabContentA2 = $(".bestSeller_tabContent--a2")[0]
-    newArbutton.on("click",function(){
-        $(tabContentA1).addClass( 'activeTab')
-        $(tabContentA2).removeClass( 'activeTab')
-    })
-    newBsbutton.on("click",function(){
-        $(tabContentA2).addClass( 'activeTab')
-        $(tabContentA1).removeClass( 'activeTab')
+    $('.bestSeller_options li').click(function(){
+        let tab_id = $(this).attr('data-tab')
+        $('.bestSeller_options li').removeClass('activeBtnTab')
+        $('.tabContent li').removeClass('activeTab')
+        $(this).addClass('activeBtnTab')
+        $("#"+tab_id).toggleClass('activeTab')
     })
 })

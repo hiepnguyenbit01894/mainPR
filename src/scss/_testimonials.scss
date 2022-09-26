@@ -1,0 +1,67 @@
+#testi {
+  font-family: "roboto", sans-serif;
+  margin-bottom: 30px;
+  .owl-nav {
+    display: none;
+  }
+  .container-v4 {
+    max-width: 1440px;
+  }
+  .testi_heading {
+    text-align: center;
+    .testi_heading--name {
+      @include titMain;
+    }
+  }
+  .testi_post {
+    .testi_post--item {
+      margin: 0 15px;
+      &:hover {
+        .testi_post--main {
+          transform: translateY(-20px);
+          border: 2px dashed #83b735;
+        }
+      }
+      .testi_post--main {
+        padding: 30px 33px 30px;
+        position: relative;
+        background: #fff;
+        box-shadow: 0 9px 18px rgb(0 0 0 / 8%), 0 5px 7px rgb(0 0 0 / 5%);
+        border-radius: 8px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        transition: 0.45s;
+        border: 2px dashed #fff;
+      }
+      .post_item--image {
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: auto;
+      }
+      .post_item--content {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 2px;
+        color: #111111;
+        padding-top: 20px;
+      }
+      .post_item--personal {
+        font-size: 14px;
+        font-weight: 400;
+        color: #c6cad0;
+        margin-bottom: 0;
+      }
+      .post_item--para {
+        font-size: 16px;
+        color: #111111;
+        margin-top: 15px;
+        margin-bottom: 25px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+}

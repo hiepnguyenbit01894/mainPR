@@ -518,7 +518,7 @@ body {
   letter-spacing: 2px;
   font-size: 14px;
   padding: 15px 40px;
-  color: rgb(255, 255, 255);
+  color: #fff;
   background-color: black;
   transition: 0.4s;
 }
@@ -624,7 +624,7 @@ body {
   letter-spacing: 2px;
   font-size: 14px;
   padding: 15px 40px;
-  color: rgb(255, 255, 255);
+  color: #fff;
   background-color: black;
   transition: 0.4s;
 }
@@ -636,6 +636,7 @@ body {
   text-align: center;
 }
 #featured .featured_title .featured_title--main {
+  font-family: "roboto", sans-serif;
   font-size: 40px;
   font-weight: 600;
   line-height: 1.2;
@@ -687,11 +688,13 @@ body {
 
 #bestSeller {
   font-family: "roboto", sans-serif;
+  margin-bottom: 40px;
 }
 #bestSeller .bestSeller_title {
   text-align: center;
 }
 #bestSeller .bestSeller_title .bestSeller_title--main {
+  font-family: "roboto", sans-serif;
   font-size: 40px;
   font-weight: 600;
   line-height: 1.2;
@@ -713,7 +716,7 @@ body {
   margin: 0px 20px;
 }
 #bestSeller .bestSeller_options .bestSeller_options--item:hover a {
-  color: rgb(255, 255, 255);
+  color: #fff;
   background-color: #83b735;
   transition: all 0.5s ease;
 }
@@ -723,9 +726,16 @@ body {
   border: 1px solid #83b735;
   transition: all 0.5s ease;
 }
+#bestSeller .activeBtnTab a {
+  color: #fff !important;
+  background-color: #83b735;
+}
 #bestSeller .bestSeller_tabContent--a1,
 #bestSeller .bestSeller_tabContent--a2 {
+  opacity: 0;
+  visibility: hidden;
   display: none;
+  transition: display 0s, opacity ease 0.5s, visible ease 0.5s;
 }
 #bestSeller .bestSeller_tabContent--a1 .row,
 #bestSeller .bestSeller_tabContent--a2 .row {
@@ -788,7 +798,7 @@ body {
 #bestSeller .bestSeller_tabContent--a1 .bestSeller_tabContent--item .tabContent_item--options .item_options--main .item_options:hover .item_options--logo,
 #bestSeller .bestSeller_tabContent--a2 .bestSeller_tabContent--item .tabContent_item--options .item_options--main .item_options:hover .item_options--logo {
   transition: all 0.5s ease-in-out;
-  color: rgb(255, 255, 255);
+  color: #fff;
 }
 #bestSeller .bestSeller_tabContent--a1 .bestSeller_tabContent--item .tabContent_item--options .item_options--main .item_options:hover #viewTitle,
 #bestSeller .bestSeller_tabContent--a1 .bestSeller_tabContent--item .tabContent_item--options .item_options--main .item_options:hover #wishTitle,
@@ -805,7 +815,7 @@ body {
   position: absolute;
   background-color: black;
   border-radius: 5px;
-  color: rgb(255, 255, 255);
+  color: #fff;
   text-align: center;
   opacity: 1;
 }
@@ -895,6 +905,338 @@ body {
 }
 #bestSeller .activeTab {
   display: block;
+  visibility: visible;
+  opacity: 1;
+  transition: display 0s, opacity ease 0.5s, visible ease 0.5s;
+}
+
+#banner {
+  font-family: "roboto", sans-serif;
+  position: relative;
+}
+#banner .banner_image {
+  max-width: 100%;
+}
+#banner .banner_image a img {
+  width: 100%;
+  height: auto;
+}
+#banner .banner_content {
+  position: absolute;
+  top: 35%;
+  margin-left: 30px;
+}
+#banner .banner_content .banner_content--title {
+  font-size: 45px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+#banner .banner_content .banner_content--para {
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+#banner .banner_content .banner_content--toshop {
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 14px;
+  padding: 15px 40px;
+  color: #fff;
+  background-color: black;
+  transition: 0.4s;
+}
+#banner .banner_content .banner_content--toshop:hover {
+  background-color: #fff;
+  color: black;
+}
+
+#latestNew {
+  font-family: "roboto", sans-serif;
+  background-color: #f5f5f5;
+  padding-bottom: 50px;
+}
+#latestNew .container-v4 {
+  max-width: 1440px;
+}
+#latestNew .latestNew_title {
+  margin: 35px 0;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #111111;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+#latestNew .latestNew_title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -25%;
+  width: 50px;
+  height: 2px;
+  transform: translateY(-50%);
+  background: #83b735;
+}
+#latestNew .latestNew_title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -25%;
+  width: 50px;
+  height: 2px;
+  transform: translateY(-50%);
+  background: #83b735;
+}
+#latestNew .lastNew_posts {
+  text-align: center;
+}
+#latestNew .lastNew_posts .lastNew_posts--item {
+  padding: 0 10px;
+}
+#latestNew .lastNew_posts .lastNew_posts--item .posts_item--main {
+  padding: 10px;
+  background-color: #fff;
+}
+#latestNew .lastNew_posts .lastNew_posts--item .posts_item--image {
+  position: relative;
+  padding-bottom: 20px;
+}
+#latestNew .lastNew_posts .lastNew_posts--item .posts_item--image img {
+  width: 100%;
+  min-height: 374px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#latestNew .lastNew_posts .lastNew_posts--item .posts_item--image .item_image--date {
+  position: absolute;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  width: 68px;
+  height: 68px;
+  background-color: #fff;
+  color: #111111;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  top: 36px;
+  left: 36px;
+  padding: 10px 0;
+}
+#latestNew .lastNew_posts .lastNew_posts--item .posts_item--image .item_image--date .image_date--day {
+  font-size: 14px;
+  display: block;
+}
+#latestNew .lastNew_posts .lastNew_posts--item .posts_item--image .item_image--date .image_date--day::after {
+  content: "";
+  background-color: #111111;
+  width: 27px;
+  height: 1px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 4px;
+}
+#latestNew .lastNew_posts .lastNew_posts--item .posts_item--image .item_image--date .image_date--month {
+  font-size: 10px;
+  display: block;
+  padding-top: 4px;
+  letter-spacing: 0.3em;
+}
+#latestNew .lastNew_posts .lastNew_posts--item .posts_item--infor .item_infor--nav {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #83868c;
+  text-transform: uppercase;
+}
+#latestNew .lastNew_posts .lastNew_posts--item .posts_item--infor .item_infor--title {
+  padding-top: 5px;
+}
+#latestNew .lastNew_posts .lastNew_posts--item .posts_item--infor .item_infor--title .infor_title--name {
+  position: relative;
+  font-size: 22px;
+  display: inline-block;
+  color: #111111;
+  font-weight: 550;
+  transition: all 0.3s ease;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+#latestNew .lastNew_posts .lastNew_posts--item .posts_item--infor .item_infor--title .infor_title--name::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  width: 50px;
+  background: #83b735;
+}
+#latestNew .lastNew_posts .lastNew_posts--item .posts_item--infor .item_infor--content {
+  font-size: 16px;
+  font-weight: 400;
+  color: #83868c;
+  padding: 0 10px;
+  letter-spacing: 0.5px;
+}
+#latestNew .lastNew_posts .lastNew_posts--item .posts_item--infor .item_infor--readmore {
+  display: inline-block;
+  margin: 15px 0;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 14px;
+  padding: 15px 40px;
+  color: #fff;
+  background-color: black;
+  transition: 0.4s;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
+#latestNew .lastNew_posts .lastNew_posts--item .posts_item--infor .item_infor--readmore:hover {
+  transition: all 0.5s ease;
+  background-color: #83b735;
+}
+
+#testi {
+  font-family: "roboto", sans-serif;
+  margin-bottom: 30px;
+}
+#testi .owl-nav {
+  display: none;
+}
+#testi .container-v4 {
+  max-width: 1440px;
+}
+#testi .testi_heading {
+  text-align: center;
+}
+#testi .testi_heading .testi_heading--name {
+  font-family: "roboto", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #111111;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 50px 0;
+}
+#testi .testi_post .testi_post--item {
+  margin: 0 15px;
+}
+#testi .testi_post .testi_post--item:hover .testi_post--main {
+  transform: translateY(-20px);
+  border: 2px dashed #83b735;
+}
+#testi .testi_post .testi_post--item .testi_post--main {
+  padding: 30px 33px 30px;
+  position: relative;
+  background: #fff;
+  box-shadow: 0 9px 18px rgba(0, 0, 0, 0.08), 0 5px 7px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  transition: 0.45s;
+  border: 2px dashed #fff;
+}
+#testi .testi_post .testi_post--item .post_item--image {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+}
+#testi .testi_post .testi_post--item .post_item--content {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 2px;
+  color: #111111;
+  padding-top: 20px;
+}
+#testi .testi_post .testi_post--item .post_item--personal {
+  font-size: 14px;
+  font-weight: 400;
+  color: #c6cad0;
+  margin-bottom: 0;
+}
+#testi .testi_post .testi_post--item .post_item--para {
+  font-size: 16px;
+  color: #111111;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+#instagram {
+  text-align: center;
+  font-family: "roboto", sans-serif;
+}
+#instagram .container-v5 {
+  max-width: 1440px;
+}
+#instagram .instagram_title .instagram_title--name {
+  font-family: "roboto", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #111111;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 50px 0;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+#instagram .instagram_title .instagram_title--fruit {
+  color: #83b735;
+  font-weight: 500;
+  margin-bottom: 0;
+  font-size: 24px;
+}
+#instagram .instagram_content {
+  position: relative;
+}
+#instagram .instagram_content .instagram_content--item:hover .instagram_item--image {
+  overflow: hidden;
+}
+#instagram .instagram_content .instagram_content--item:hover .instagram_item--image img {
+  transition: all 4s ease;
+  transform: scale(1.2);
+}
+#instagram .instagram_content .instagram_content--item:hover .instagram_item--blur {
+  transition: all 0.5s ease;
+  opacity: 1;
+  cursor: pointer;
+}
+#instagram .instagram_content .instagram_content--item .instagram_item--main {
+  margin: 0 5px;
+}
+#instagram .instagram_content .instagram_content--item .instagram_item--main .instagram_item--image img {
+  transition: all 4s ease;
+}
+#instagram .instagram_content .instagram_item--blur {
+  position: absolute;
+  align-items: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: all 0.5s ease;
+  opacity: 0;
+  flex-direction: column;
+  z-index: 100;
+}
+#instagram .instagram_content .instagram_item--blur .instagram_item--link {
+  position: absolute;
+  font-size: 48px;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media screen and (min-width: 768px) {

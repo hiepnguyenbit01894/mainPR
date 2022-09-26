@@ -260,4 +260,58 @@ $(document).ready(function(){
           }
       }
   })
+    $('.lastNew_posts').owlCarousel({
+    loop:false,
+    margin:10,
+    nav:false,
+    dots:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        700:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+  })  
+  $('.testi_post').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    dots:true,
+    dotsEach:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+  })
+
+  $('.instagram_content').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    dots:true,
+    dotsEach:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:5
+        }
+    }
+  })
 })
