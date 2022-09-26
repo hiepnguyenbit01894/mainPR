@@ -1,10 +1,13 @@
 #instagram {
   text-align: center;
   font-family: "roboto", sans-serif;
+  margin-bottom: 40px;
+
   .container-v5 {
     max-width: 1440px;
   }
   .instagram_title {
+    margin-bottom: 40px;
     .instagram_title--name {
       @include titMain;
       font-weight: 500;
@@ -13,7 +16,6 @@
     .instagram_title--fruit {
       color: #83b735;
       font-weight: 500;
-      margin-bottom: 0;
       font-size: 24px;
     }
   }

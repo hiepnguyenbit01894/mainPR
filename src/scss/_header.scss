@@ -12,6 +12,7 @@ body{
     transition: all 0.4s;
     .container-v1 {
         display: none;
+        max-width: 1440px;
     #navbar-nav{
         .nav-link{
             cursor: pointer;
@@ -131,7 +132,7 @@ body{
     .menuMoblie{  
         justify-content: space-between;
         display: flex;
-        padding: 15px;
+        padding: 30px;
         background: #ffffff;
         position: fixed;
         top: 0;

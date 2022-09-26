@@ -1,0 +1,113 @@
+#footer{
+    font-family: 'roboto',sans-serif;
+    .container-v4{
+        max-width: 1440px;
+    }
+    .row{
+        display: flex;
+    }
+    .footer_infor--1{
+    .footer_logo{
+        margin-bottom: 20px;
+        width: 100%;
+        a{
+            img{
+                max-width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+    }
+    .footer_para{
+        font-weight: 400;
+        margin-top: 23px;
+        font-size: 17px;
+        line-height: 30px;
+    }
+    .footer_list{
+        .footer_list--icons{
+            display: flex;
+            margin-top: 20px;
+            .list_icons--item{
+                margin-right: 0.5rem;
+                .icons_item--link{
+                    display: inline-block;
+                    color: #111111;
+                    font-size: 16px;
+                    border-radius: 50%;
+                    margin: 0 5px 0 5px;
+                    position: relative;
+                }
+            }
+        }
+    }
+    }
+    .footer_infor--2{
+        .footer_infor--title{
+            font-size: 18px;
+            font-weight: 600;
+            &::after{
+                content: '';
+                display: block;
+                height: 1px;
+                width: 30px;
+                margin-top: 20px;
+                background-color: #111111;
+            }
+        }
+        
+        .footer_infor--list{
+            margin: 20px 0;
+            
+            li{
+                transition: all 0.4s ease-in-out;
+
+                &:hover{
+                    color: $mainColor;
+                    padding-left: 10px;
+                    transition: all 0.4s ease-in-out;
+                    cursor: pointer;
+                }
+                .infor_list--link{
+                    font-weight: 400;
+                    line-height: 40px;
+                    color: #111111;
+                    text-decoration: none;
+                    transition: all 0.4s ease-in-out;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .footer_bot{
+        border-top: 1px solid #eee;
+        padding: 26px 0;
+        .footer_bot--text{
+            .fruitbeeStore,
+            .themeOcean,
+            .power{
+                position: relative;
+                display: inline-block;
+                color: black;
+                &:hover{
+                    opacity: 0.8;
+                    &::after{
+                        width: 100%;
+                    }
+                }
+                    &::after{
+                        content: '';
+                        overflow: hidden;
+                        position: absolute;
+                        left: 0;
+                        bottom: -1px;
+                        display: block;
+                        width: 0;
+                        height: 1px;
+                        background-color: #83b735;
+                        transition: all 0.3s cubic-bezier(.175, .885, .32, 1.075);
+                    }
+            }
+        }
+    }
+}

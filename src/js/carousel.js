@@ -244,7 +244,7 @@ $(document).ready(function(){
             items: 2,
           },
           400:{
-            items :3,
+            items :2,
           },
           600:{
               items:3,

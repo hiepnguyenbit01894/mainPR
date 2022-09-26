@@ -1,5 +1,6 @@
 @import "color";
 @import "mixin";
+// main Website
 @import "header";
 @import "slider";
 @import "featuredProducts";
@@ -8,4 +9,9 @@
 @import "latest";
 @import "testimonials";
 @import "instagram";
+@import "footer";
+// end of main Website
+// Shop page
+@import "bannerProducts";
+// end of shopPage
 @import "media";
