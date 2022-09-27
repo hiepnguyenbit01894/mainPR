@@ -1383,6 +1383,178 @@ body {
 #bannerProducts .bannerProducts_image--nav a {
   color: #fff;
 }
+#shopContent {
+  font-family: "roboto", sans-serif;
+  margin-bottom: 40px;
+}
+#shopContent .container-v1 {
+  max-width: 1440px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e7e7e7;
+}
+#shopContent .shopContent_title {
+  font-size: 14px;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  margin: 0 0 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e7e7e7;
+  padding-left: 40px;
+  position: relative;
+}
+#shopContent .shopContent_title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  background: url(/src/image/icon-bestseller.svg) no-repeat;
+  background-size: contain;
+  top: -5px;
+}
+#shopContent .shopContent_slider .shopContent_slider--item .bestSeller_tabContent--item {
+  position: relative;
+  margin-bottom: 20px;
+}
+#shopContent .shopContent_slider .shopContent_slider--item .bestSeller_tabContent--item .tabContent_item--image img {
+  width: 100%;
+}
+#shopContent .shopContent_slider .shopContent_slider--item .bestSeller_tabContent--item:hover .tabContent_item--options {
+  bottom: 100px;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+#shopContent .shopContent_slider .shopContent_slider--item .bestSeller_tabContent--item .tabContent_item--options {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+#shopContent .shopContent_slider .shopContent_slider--item .bestSeller_tabContent--item .tabContent_item--options .item_options--main {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  height: 0px;
+  top: -26px;
+  left: 0;
+  right: 0;
+  transition: all 0.5s ease;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#shopContent .shopContent_slider .shopContent_slider--item .bestSeller_tabContent--item .tabContent_item--options .item_options--main .item_options {
+  position: relative;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 15px 25px rgba(27, 26, 26, 0.08);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+#shopContent .shopContent_slider .shopContent_slider--item .bestSeller_tabContent--item .tabContent_item--options .item_options--main .item_options:hover {
+  background-color: #83b735;
+}
+#shopContent .shopContent_slider .shopContent_slider--item .bestSeller_tabContent--item .tabContent_item--options .item_options--main .item_options:hover .item_options--logo {
+  transition: all 0.5s ease-in-out;
+  color: #fff;
+}
+#shopContent .shopContent_slider .shopContent_slider--item .bestSeller_tabContent--item .tabContent_item--options .item_options--main .item_options:hover #viewTitle,
+#shopContent .shopContent_slider .shopContent_slider--item .bestSeller_tabContent--item .tabContent_item--options .item_options--main .item_options:hover #wishTitle,
+#shopContent .shopContent_slider .shopContent_slider--item .bestSeller_tabContent--item .tabContent_item--options .item_options--main .item_options:hover #cartTitle {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+#shopContent .shopContent_slider .shopContent_slider--item .bestSeller_tabContent--item .tabContent_item--options .item_options--main .item_options .item_options--Title {
+  position: absolute;
+  background-color: black;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  opacity: 1;
+}
+#shopContent .shopContent_slider .shopContent_slider--item .bestSeller_tabContent--item .tabContent_item--options .item_options--main .item_options #viewTitle {
+  top: -79%;
+  left: 1px;
+  padding: 5px 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+#shopContent .shopContent_slider .shopContent_slider--item .bestSeller_tabContent--item .tabContent_item--options .item_options--main .item_options #viewTitle::before {
+  content: "";
+  position: absolute;
+  top: 93%;
+  left: 31%;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid rgb(0, 0, 0);
+}
+#shopContent .shopContent_slider .shopContent_slider--item .bestSeller_tabContent--item .tabContent_item--options .item_options--main .item_options #wishTitle {
+  top: -79%;
+  left: -49px;
+  width: 140px;
+  padding: 5px 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+#shopContent .shopContent_slider .shopContent_slider--item .bestSeller_tabContent--item .tabContent_item--options .item_options--main .item_options #wishTitle::before {
+  content: "";
+  position: absolute;
+  top: 88%;
+  left: 46%;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid rgb(0, 0, 0);
+}
+#shopContent .shopContent_slider .shopContent_slider--item .bestSeller_tabContent--item .tabContent_item--options .item_options--main .item_options #cartTitle {
+  top: -79%;
+  left: -49px;
+  width: 140px;
+  padding: 5px 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+#shopContent .shopContent_slider .shopContent_slider--item .bestSeller_tabContent--item .tabContent_item--options .item_options--main .item_options #cartTitle::before {
+  content: "";
+  position: absolute;
+  top: 88%;
+  left: 46%;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid rgb(0, 0, 0);
+}
+#shopContent .shopContent_slider .shopContent_slider--item .bestSeller_tabContent--item .tabContent_item--name {
+  background-color: #f6f6f6;
+  font-size: 16px;
+  font-weight: 600;
+  padding-top: 20px;
+  letter-spacing: 1px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+#shopContent .shopContent_slider .shopContent_slider--item .bestSeller_tabContent--item .tabContent_item--price {
+  background-color: #f6f6f6;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #83b735;
+}
+
 @media screen and (min-width: 1024px) {
   #header {
     position: fixed;
