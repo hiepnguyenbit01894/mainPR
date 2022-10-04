@@ -62,7 +62,7 @@ function renderPrn(products) {
   let item = ""
   for (let product of products) {
     item += `
-        <div class="bestSeller_tabContent--item col-lg-3 col-md-4 col-sm-6 col-6">
+        <div class="bestSeller_tabContent--item col-lg-3 col-md-4 col-sm-6 col-6" data-name ="p-${product.id}">
         <div class="tabContent_item--image">
         <a href="#">
         <img src="${product.image}" alt="">
@@ -172,7 +172,7 @@ function renderPrb(products) {
   let item = ""
   for (let product of products) {
     item += `
-        <div class="bestSeller_tabContent--item col-lg-3 col-md-4 col-sm-6 col-6">
+        <div class="bestSeller_tabContent--item col-lg-3 col-md-4 col-sm-6 col-6" data-name ="p-${product.id}">
         <div class="tabContent_item--image">
         <a href="#">
         <img src="${product.image}" alt="">
@@ -391,7 +391,6 @@ let currentPage = 1
 let startPage = 0
 let endPage = perPage
 const totalPages = Math.ceil(productShopPage.length / perPage)
-console.log(totalPages);
 const nextPage = $('.next')
 const prevPage = $('.prev')
 
@@ -440,13 +439,12 @@ function changePage(){
 }
 // ========================
 renderPrSb(productShopPage)
-function renderPrSb(products) {
+function renderPrSb(products){
   let item = ""
   for (let product of products) {
     if (product.id > startPage && product.id < endPage) {
-
       item += `
-        <div class="bestSeller_tabContent--item col-lg-3 col-md-4 col-sm-6 col-6 shopItemsList">
+        <div class="bestSeller_tabContent--item col-lg-3 col-md-4 col-sm-6 col-6 shopItemsList"  data-name ="p-${product.id}">
             <!-- image Product -->
             <div class="tabContent_item--image">
               <a href="#!">

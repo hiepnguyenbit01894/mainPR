@@ -14,5 +14,20 @@
 // Shop page
 @import "bannerProducts";
 @import "shopContent";
+// Blog Page
+@import "blogContent";
 // end of shopPage
+//quick-view
+@import "quickview";
+// product Page detail
+@import "prPage";
+@import "fIcon";
+@import "tab";
+@import "icon";
+@import "prSlider";
+// ======
 @import "media";
+@import "keyframes";
+.container-v2{
+    max-width: 1440px;
+}

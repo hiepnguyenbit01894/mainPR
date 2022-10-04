@@ -1,5 +1,8 @@
-- trang list toàn bộ sản phẩm (phân trang) 
-- trang đăng nhập, đăng ký 
+- trang list toàn bộ sản phẩm (phân trang) (check)
+- quickview (check)
+- trang blog (check)
 - trang đơn sản phẩm 
-- trang giỏ hàng (JS,localstorage)
+- trang đăng nhập, đăng ký 
+- trang giỏ hàng (JS,localstorage) 
 - phần search filter
+

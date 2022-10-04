@@ -129,6 +129,13 @@
         }
       }
     }
+    .tabContent{
+      .item_options--main{
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
   }
   #banner{
     .banner_content{
