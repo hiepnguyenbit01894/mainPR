@@ -85,7 +85,7 @@
   .cartBar,
   .wishBar
   {
-    width: 80%;
+    width: 50%;
     right: -80%;
   }
   .contentActive{
@@ -193,6 +193,22 @@
 
 }
 @media screen and(max-width:576px){
+  .cartBar,
+  .wishBar
+  {
+    width: 75%;
+    right: -80%;
+    .cart_body--show{
+      .cart_body--product{
+        .cart_product--image{
+          width: 35% !important;
+        }
+      }
+    }
+  }
+  .contentActive{
+    right: 0;
+  }
   #banner{
     .banner_content{
       top: 45%;

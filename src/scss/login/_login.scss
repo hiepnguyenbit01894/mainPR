@@ -1,0 +1,63 @@
+#form_content{
+    padding: 250px 0 100px 0;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #e7e7e7;
+    font-family: 'roboto',sans-serif;
+    .form_content--login,.form_content--register{
+        .login_title{
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 600;
+            padding-bottom: 50px;
+            letter-spacing: 1.5px;
+        }
+        .form-group{
+            margin-bottom: 1rem;
+            .form_group--label{
+                font-size: 16px;
+                font-weight: 500;
+            }
+            .form_group--input{
+                border: none;
+                border-bottom: 1px solid #ccc;
+                border-radius: 0;
+            }
+        }
+        .form_content--btn{
+            .btn-main{
+                border-radius: 0;
+                padding: 12px 40px;
+                background-color: #111111;
+                text-transform: uppercase;
+                color: #fff;
+                position: relative;
+                overflow: hidden;
+                border: none;
+                letter-spacing: .2em;
+                font-size: 14px;
+                border:  1px solid black;
+                transition: 0.3s all ease;
+
+                &:hover{
+                    transition: 0.3s all ease;
+                    background-color: #fff;
+                    color: $mainColor;
+                    border:  1px solid $mainColor;
+                }
+            }
+        }
+        .forgot_pass_form{
+            a{
+                font-size: 14px;
+                transition: 0.3s all ease;
+                &:hover{
+                    transition: 0.3s all ease;
+                    color: $mainColor;
+                }
+            }
+            .forgot_pass--left{
+                padding-right: 15px;
+            }
+        }
+    }
+}

@@ -2,29 +2,31 @@
 @import "mixin";
 // main Website
 @import "header";
-@import "slider";
-@import "featuredProducts";
-@import "bestSeller";
-@import "banner";
-@import "latest";
-@import "testimonials";
-@import "instagram";
+@import "homepage/slider";
+@import "homepage/featuredProducts";
+@import "homepage/bestSeller";
+@import "homepage/banner";
+@import "homepage/latest";
+@import "homepage/testimonials";
+@import "homepage/instagram";
 @import "footer";
 // end of main Website
 // Shop page
-@import "bannerProducts";
-@import "shopContent";
-// Blog Page
-@import "blogContent";
+@import "shoppage/bannerProducts";
+@import "shoppage/shopContent";
 // end of shopPage
+// Blog Page
+@import "blogpage/blogContent";
 //quick-view
 @import "quickview";
 // product Page detail
-@import "prPage";
-@import "fIcon";
-@import "tab";
-@import "icon";
-@import "prSlider";
+@import "detailProduct/prPage";
+@import "detailProduct/fIcon";
+@import "detailProduct/tab";
+@import "detailProduct/icon";
+@import "detailProduct/prSlider";
+// Login
+@import "login/login";
 // ======
 @import "media";
 @import "keyframes";

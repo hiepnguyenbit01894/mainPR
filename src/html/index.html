@@ -270,11 +270,53 @@
         </div>
       </div>
       <div class="cartBar_main--body d-flex flex-column align-items-center ">
-        <div class="cartBar_body--image ">
-          <img src="/src/image/Cart-empty.png" alt="">
+        <div class="cart_body--empty text-center">
+          <div class="cartBar_body--image ">
+            <img src="/src/image/Cart-empty.png" alt="">
+          </div>
+          <h4 class="cartBar_body--noti">Your cart is Empty</h4>
+          <a href="#" class="cartBar_body--tocart"> Go to the Shop</a>
         </div>
-        <h4 class="cartBar_body--noti">Your cart is Empty</h4>
-        <a href="#" class="cartBar_body--tocart"> Go to the Shop</a>
+        <div class="cart_body--show">
+          <div class="cart_body--product d-flex">
+            <div class="cart_product--image">
+              <img src="/src/image/banana.jpg" alt="">
+            </div>
+            <div class="cart_product--infor">
+              <h3 class="product_infor--name iitem">
+                <a href="products/Banana.html">
+                  Banana
+                </a>
+              </h3>
+              <div class="product_infor--quantity iitem">
+                Qty: 1
+              </div>
+              <div class="product_infor--price iitem">
+                <span>$45.00</span>
+              </div>
+              <div class="product_infor--title iitem">
+                From: FruitBee
+              </div>
+            </div>
+            <div class="cart_product--remove">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cartBar_main--footer">
+        <div class="cartBar_main--total">
+          <span class="total-title float-left">Total:</span>
+          <span class="total-price float-right">$100.00</span>
+        </div>
+        <div class="cartBar_main--viewCart">
+          <a href="#!" class="button-viewcart">
+            <span>View cart</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>

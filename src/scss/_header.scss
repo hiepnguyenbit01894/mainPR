@@ -72,6 +72,25 @@ body{
     }
         .currencies-login{
             .list-inline{
+                .cartItems{
+                    position: relative;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        width: 10px;
+                        height: 10px;
+                        bottom: -3px;
+                        right: 0;
+                        opacity: 0;
+                        visibility: hidden;
+                        background-color: $mainColor;
+                        border-radius: 50%;
+                    }
+                }
+                .acviteCart{
+                    opacity: 1;
+                    visibility: visible;
+                }
                 .list-inline-item{
                     transition: 0.4s;
                     margin-right: 0.5vw;
@@ -365,7 +384,7 @@ body{
 .cartBar,
 .wishBar{
     font-family: 'roboto',sans-serif;
-    background-color: #f7f7f7;
+    background-color: #fff;
     z-index: 130;
     height: 100%;
     position: fixed;
@@ -430,6 +449,105 @@ body{
                     transition: all 0.4s ease;
                 }
             }
+            .cart_body--empty{
+                display: none;
+            }
+            .cart_body--show{
+                @include flex-Center;
+                align-items: center;
+                .cart_body--product{
+                    width: 95%;
+                    padding: 10px;
+                    border-bottom: 1px solid #e1e1e1;
+                    .cart_product--image{
+                        width: 25%;
+                        img{
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                    .cart_product--infor{
+                        line-height: 16px;
+                        width: 70%;
+                        padding-left: 20px;
+                        .product_infor--title{
+                            font-size: 17px;
+                        }
+                        .product_infor--title{
+
+                        }
+                        .product_infor--name{
+                            a{
+
+                                font-size: 16px;
+                                text-align: justify;
+                                color: #111111;
+                                text-decoration: none;
+                                font-weight: 400;
+                            }
+                        }
+                        .iitem{
+                            padding-bottom: 10px;
+                        }
+                    }
+                    .cart_product--remove{
+                        width: 15%;
+                    }
+                }
+            }
+        }
+
+        .cartBar_main--footer{
+            width: 100%;
+            .cartBar_main--total{
+                height: 59px;
+                line-height: 59px;
+                background-color: #f7f7f7;
+                color: #111111;
+                padding: 0 15px;
+                overflow: hidden;
+                bottom: 59px;
+                position: absolute;
+                width: 400px;
+                width: 100%;
+                .total-title{
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+                .total-price{
+                    float: right;
+                    width: auto;
+                    font-weight: 600;
+                    display: inline-block;
+                    color: #83b735;
+                }
+            }
+            .cartBar_main--viewCart{
+                bottom: 0;
+                position: absolute;
+                width: 400px;
+                width: 100%;
+                .button-viewcart{
+                    width: 100%;
+                    font-weight: 600;
+                    font-size: 12px;
+                    float: left;
+                    text-transform: uppercase;
+                    text-align: center;
+                    letter-spacing: .2em;
+                    height: 59px;
+                    line-height: 61px;
+                    color: #fff;
+                    background-color: #2a2a2a;
+                    transition: color .3s ease 0s,background-color .3s ease 0s;
+                    &:hover{
+                        transition: color .3s ease 0s,background-color .3s ease 0s;
+                        background-color: $mainColor;
+
+                    }
+            }
+        }
+
         }
     }
     
