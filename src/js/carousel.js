@@ -56,7 +56,6 @@ const productNewarrivals = [
     "category": "fruits"
   },
 ]
-
 renderPrn(productNewarrivals)
 function renderPrn(products) {
   let item = ""
@@ -65,29 +64,29 @@ function renderPrn(products) {
         <div class="bestSeller_tabContent--item col-lg-3 col-md-4 col-sm-6 col-6" data-name ="p-${product.id}">
         <div class="tabContent_item--image">
         <a href="#">
-        <img src="${product.image}" alt="">
+        <img src="${product.image}" alt="" class = "imgItem">
         </a>
         </div>
         <div class="tabContent_item--options">
               <ul class="item_options--main">
-                <li class="item_options" id="view">
-                  <a href="#" class="item_options--logo">
+                <li class="item_options viewPr" >
+                  <a href="#!" class="item_options--logo">
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                       </svg>
                     </a>
                     <span class="item_options--Title" id="viewTitle">View</span>
                       </li>
-                      <li class="item_options" id="wish">
-                    <a href="#" class="item_options--logo"> 
+                      <li class="item_options addtowish" >
+                    <a href="#!" class="item_options--logo"> 
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
                         <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
                       </svg>
                     </a>
                     <span class="item_options--Title" id = "wishTitle">Add to WishList</span>
                       </li>
-                      <li class="item_options" id="cart">
-                    <a href="#" class="item_options--logo">
+                      <li class="item_options addtocart" >
+                    <a href="#!" class="item_options--logo">
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-dash" viewBox="0 0 16 16">
                       <path fill-rule="evenodd" d="M5.5 10a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z"/>
                       <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
@@ -97,8 +96,8 @@ function renderPrn(products) {
                       </li>
               </ul>
             </div>
-            <h3 class="tabContent_item--name">
-            <a href="#">${product.name}</a>
+            <h3 class="tabContent_item--name" >
+            <a href="#!" class = "imgName">${product.name}</a>
             </h3>
             <p class="tabContent_item--price">
             $${product.price}.00
@@ -175,29 +174,29 @@ function renderPrb(products) {
         <div class="bestSeller_tabContent--item col-lg-3 col-md-4 col-sm-6 col-6" data-name ="p-${product.id}">
         <div class="tabContent_item--image">
         <a href="#">
-        <img src="${product.image}" alt="">
+        <img src="${product.image}" alt="" class = "imgItem">
         </a>
         </div>
         <div class="tabContent_item--options">
               <ul class="item_options--main">
-                <li class="item_options" id="view">
-                  <a href="#" class="item_options--logo">
+                <li class="item_options viewPr" >
+                  <a href="#!" class="item_options--logo">
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                       </svg>
                     </a>
                     <span class="item_options--Title" id="viewTitle">View</span>
                       </li>
-                      <li class="item_options" id="wish">
-                    <a href="#" class="item_options--logo"> 
+                      <li class="item_options addtowish">
+                    <a href="#!" class="item_options--logo"> 
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
                         <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
                       </svg>
                     </a>
                     <span class="item_options--Title" id = "wishTitle">Add to WishList</span>
                       </li>
-                      <li class="item_options" id="cart">
-                    <a href="#" class="item_options--logo">
+                      <li class="item_options addtocart" >
+                    <a href="#!" class="item_options--logo">
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-dash" viewBox="0 0 16 16">
                       <path fill-rule="evenodd" d="M5.5 10a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z"/>
                       <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
@@ -208,7 +207,7 @@ function renderPrb(products) {
               </ul>
             </div>
             <h3 class="tabContent_item--name">
-            <a href="#">${product.name}</a>
+            <a href="#!" class = "imgName">${product.name}</a>
             </h3>
             <p class="tabContent_item--price">
             $${product.price}.00
@@ -218,11 +217,8 @@ function renderPrb(products) {
   }
   $('.bestSeller_tabContent--a2 .row ').html(item)
 }
-
-
 // Render Product Shop Page
 const productShopPage = [
-
   {
     "id": 1,
     "name": "Brocolli",
@@ -385,127 +381,127 @@ const productShopPage = [
     "category": "fruits"
   }
 ]
-// next Page
-let perPage = 9
-let currentPage = 1
-let startPage = 0
-let endPage = perPage
-const totalPages = Math.ceil(productShopPage.length / perPage)
-const nextPage = $('.next')
-const prevPage = $('.prev')
+      // next Page
+      let perPage = 9
+      let currentPage = 1
+      let startPage = 0
+      let endPage = perPage
+      const totalPages = Math.ceil(productShopPage.length / perPage)
+      const nextPage = $('.next')
+      const prevPage = $('.prev')
 
-//  get current PAge
-function getCurrentPage(currentPage){
-  startPage = (currentPage - 1) * perPage
-  endPage = currentPage * perPage
-}
+      //  get current PAge
+      function getCurrentPage(currentPage){
+        startPage = (currentPage - 1) * perPage
+        endPage = currentPage * perPage
+      }
 
-// next Page
-nextPage.on("click", function () {
-  currentPage++;
-  if (currentPage > totalPages) {
-    currentPage = totalPages
-  }
-  $('.pagination .page-items .page-link').removeClass('activePagi')
-  $(`.pagination .page-items:eq(${currentPage - 1}) .num`).addClass('activePagi')
-  getCurrentPage(currentPage)
-  renderPrSb(productShopPage)
-})
-// Previous Page
-prevPage.on("click", function () {
-  currentPage--;
-  if (currentPage <= 1) {
-    currentPage = 1
-  }
-  $('.pagination .page-items .page-link').removeClass('activePagi')
-  $(`.pagination .page-items:eq(${currentPage - 1}) .num`).addClass('activePagi')
-  getCurrentPage(currentPage)
-  renderPrSb(productShopPage)
-})
-// Change Page
-function changePage(){
-  const currentPages = document.querySelectorAll('.page-items') 
-  for(let i = 0;i < currentPages.length; i++)
-  {
-    currentPages[i].addEventListener("click",function(){
-      const value = i + 1
-      currentPage = value
-      $('.pagination .page-items .page-link').removeClass('activePagi')
-      currentPages[i].children[0].classList.add('activePagi')
-      getCurrentPage(currentPage)
-      renderPrSb(productShopPage) 
-    })
-  }
-}
-// ========================
-renderPrSb(productShopPage)
-function renderPrSb(products){
-  let item = ""
-  for (let product of products) {
-    if (product.id > startPage && product.id < endPage) {
-      item += `
-        <div class="bestSeller_tabContent--item col-lg-3 col-md-4 col-sm-6 col-6 shopItemsList"  data-name ="p-${product.id}">
-            <!-- image Product -->
-            <div class="tabContent_item--image">
-              <a href="#!">
-                <img src="${product.image}" alt="">
-              </a>
-            </div>
-            <!-- end of image -->
-            <!-- choose options product -->
-            <div class="tabContent_item--options" >
-              <ul class="item_options--main">
-                <li class="item_options" id="view">
-                  <a href="#!" class="item_options--logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                      class="bi bi-search" viewBox="0 0 16 16">
-                      <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                    </svg>
-                  </a>
-                  <span class="item_options--Title" id="viewTitle">View</span>
-                </li>
-                <li class="item_options" id="wish">
-                  <a href="#!" class="item_options--logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                      class="bi bi-heart" viewBox="0 0 16 16">
-                      <path
-                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-                    </svg>
-                  </a>
-                  <span class="item_options--Title" id="wishTitle">Add to WishList</span>
-                </li>
-                <li class="item_options" id="cart">
-                  <a href="#!" class="item_options--logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                      class="bi bi-bag-dash" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd" d="M5.5 10a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z" />
-                      <path
-                        d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-                    </svg>
-                  </a>
-                  <span class="item_options--Title" id="cartTitle">Add to Cart</span>
-                </li>
-              </ul>
-            </div>
-            <!-- end of options -->
-            <!-- name product -->
-            <p class="tabContent_item--name" data-name="${product.name}">
-              ${product.name}
-            </p>
-            <!-- end of name product-->
-            <!-- price product -->
-            <p class="tabContent_item--price" data-price ="${product.price}" data-id="${product.id}">
-              $${product.price}.00
-            </p>
-            <!-- end of price product-->
-          </div>
-            `
-    }
-  }
-  $('.shopContent_list .row ').html(item)
-}
-changePage()
+      // next Page
+      nextPage.on("click", function () {
+        currentPage++;
+        if (currentPage > totalPages) {
+          currentPage = totalPages
+        }
+        $('.pagination .page-items .page-link').removeClass('activePagi')
+        $(`.pagination .page-items:eq(${currentPage - 1}) .num`).addClass('activePagi')
+        getCurrentPage(currentPage)
+        renderPrSb(productShopPage)
+      })
+      // Previous Page
+      prevPage.on("click", function () {
+        currentPage--;
+        if (currentPage <= 1) {
+          currentPage = 1
+        }
+        $('.pagination .page-items .page-link').removeClass('activePagi')
+        $(`.pagination .page-items:eq(${currentPage - 1}) .num`).addClass('activePagi')
+        getCurrentPage(currentPage)
+        renderPrSb(productShopPage)
+      })
+      // Change Page
+      function changePage(){
+        const currentPages = document.querySelectorAll('.page-items') 
+        for(let i = 0;i < currentPages.length; i++)
+        {
+          currentPages[i].addEventListener("click",function(){
+            const value = i + 1
+            currentPage = value
+            $('.pagination .page-items .page-link').removeClass('activePagi')
+            currentPages[i].children[0].classList.add('activePagi')
+            getCurrentPage(currentPage)
+            renderPrSb(productShopPage) 
+          })
+        }
+      }
+    // ========================
+            renderPrSb(productShopPage)
+            function renderPrSb(products){
+              let item = ""
+              for (let product of products) {
+                if (product.id > startPage && product.id < endPage) {
+                  item += `
+                    <div class="bestSeller_tabContent--item col-lg-3 col-md-4 col-sm-6 col-6 shopItemsList"  data-name ="p-${product.id}">
+                        <!-- image Product -->
+                        <div class="tabContent_item--image">
+                          <a href="#!">
+                            <img src="${product.image}" alt="">
+                          </a>
+                        </div>
+                        <!-- end of image -->
+                        <!-- choose options product -->
+                        <div class="tabContent_item--options" >
+                          <ul class="item_options--main">
+                            <li class="item_options viewPr">
+                              <a href="#!" class="item_options--logo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                  class="bi bi-search" viewBox="0 0 16 16">
+                                  <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                </svg>
+                              </a>
+                              <span class="item_options--Title" id="viewTitle">View</span>
+                            </li>
+                            <li class="item_options addtowish">
+                              <a href="#!" class="item_options--logo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                  class="bi bi-heart" viewBox="0 0 16 16">
+                                  <path
+                                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                                </svg>
+                              </a>
+                              <span class="item_options--Title" id="wishTitle">Add to WishList</span>
+                            </li>
+                            <li class="item_options addtocart" >
+                              <a href="#!" class="item_options--logo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                  class="bi bi-bag-dash" viewBox="0 0 16 16">
+                                  <path fill-rule="evenodd" d="M5.5 10a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z" />
+                                  <path
+                                    d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                                </svg>
+                              </a>
+                              <span class="item_options--Title" id="cartTitle">Add to Cart</span>
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- end of options -->
+                        <!-- name product -->
+                        <p class="tabContent_item--name" data-name="${product.name}">
+                          ${product.name}
+                        </p>
+                        <!-- end of name product-->
+                        <!-- price product -->
+                        <p class="tabContent_item--price" data-price ="${product.price}" data-id="${product.id}">
+                          $${product.price}.00
+                        </p>
+                        <!-- end of price product-->
+                      </div>
+                        `
+                }
+              }
+              $('.shopContent_list .row ').html(item)
+            }
+            changePage()
 
 //slider of Website
 $(document).ready(function () {
@@ -621,4 +617,47 @@ $(document).ready(function () {
       }
     }
   })
+})
+// search bar
+renderSearch(productShopPage)
+function renderSearch(searchProduct) {
+  document.querySelectorAll('.result_product').innerText =""
+  let item = ''
+  for(let product of searchProduct){
+    item += `
+      <div class="col-lg-4 col-sm-6 col-md-6 layout">
+              <div class="result_product">
+                <a href="#!" class="result_product--image">
+                  <img src="${product.image}" alt="">
+                </a>
+                <h4 class="result_product--title">
+                  <a href="#!">${product.name}</a>
+                </h4>
+                <span class="result_product--price">
+                  $${product.price}.00 USD
+                </span>
+              </div>
+      </div>
+    `
+  }
+  $('.searchBar-result--main').html(item)
+}
+
+let search = document.getElementsByClassName('searchBar-form--input')[0]
+search.addEventListener('keyup',() => {
+  let filter = search.value.toUpperCase()
+  let Product = document.querySelectorAll('.result_product')
+  for(let i = 0; i < Product.length;i++)
+  {
+    let b  = Product[i].querySelectorAll('.result_product--title')[0]
+    let namePR = b.querySelectorAll('a')[0]
+    let textVal = namePR.textContent || namePR.innerText
+    if(textVal.toUpperCase().indexOf(filter) > -1){
+      Product[i].parentElement.style.display = ''
+    }
+    else {
+      Product[i].parentElement.style.display = 'none'
+      
+    }
+  }
 })

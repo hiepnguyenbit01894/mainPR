@@ -9,7 +9,7 @@
 }
 @mixin bgblur {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   top: 0;
   left: 0;
@@ -47,7 +47,7 @@
                     border-radius: 0;
                     color: $mainColor;
                 }
-                .btn-addtocart{
+                .addtocart{
                     background-color: $mainColor;
                     padding: 12px 20px;
                     border-radius: 5px;

@@ -1,8 +1,8 @@
-- trang list toàn bộ sản phẩm (phân trang) (check)
-- quickview (check)
-- trang blog (check)
-- trang đơn sản phẩm (check)
-- trang đăng nhập, đăng ký (check)
-- trang giỏ hàng (JS,localstorage) 
-- phần search filter
+- trang list toàn bộ sản phẩm (phân trang) (checked)
+- quickview (checked)
+- trang blog (checked)
+- trang đơn sản phẩm (checked)
+- trang đăng nhập, đăng ký (checked)
+- trang giỏ hàng (JS,localstorage)  (loading)
+- phần search filter(checked)
 

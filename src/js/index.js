@@ -8,23 +8,22 @@ $(document).ready(function () {
     const bgSearchBar = $(".searchBar .bgSearchBar")
     const body = $("BODY")[0]
     searchButton.on("click", function () {
-        header.style.marginTop = "522px"
+        header.style.opacity = "0"
         searchbarMAin.toggleClass('active')
         bgSearchBar.toggleClass('active')
         $(body).toggleClass("activeBody")
     })
     searchExitButton.on("click", function () {
         searchbarMAin.removeClass('active')
-        header.style.marginTop = "0"
+        header.style.opacity = "1"
         bgSearchBar.removeClass('active')
         $(body).removeClass("activeBody")
     })
-    //toggle header cartBar
+    // Header CartBar
     const cartButton = $(".cartItems")
     const cartBar = $(".cartBar")
     const bgcartBar = $(".bgcartBar")
     const cartExit = $(".cartBar .cartBar_head--exit")
-
     cartButton.on("click", function () {
         cartBar.toggleClass('contentActive')
         bgcartBar.toggleClass('bgactive')
@@ -33,6 +32,45 @@ $(document).ready(function () {
         cartBar.toggleClass('contentActive')
         bgcartBar.toggleClass('bgactive')
     })
+    // ==== Adding data to localstorage
+    let btnAddtoCart = document.getElementsByClassName("addtocart")
+    
+    let items =[]
+    for(let i =0 ;i <btnAddtoCart.length;i++)
+    {
+        btnAddtoCart[i].addEventListener("click",(e)=>{
+            if(typeof(Storage) !== 'undefined')
+            {
+                let item = {
+                    image: e.target.parentElement.parentElement.parentElement.children[0].children[0].src,
+                    name: e.target.parentElement.parentElement.parentElement.children[1].children[0].children[0].innerText,
+                    price: e.target.parentElement.parentElement.parentElement.children[1].children[1].innerText,
+                    quantity: e.target.parentElement.parentElement.parentElement.children[1].children[3].children[0].children[1].value
+                }
+                if(JSON.parse(localStorage.getItem('items')) === null)
+                {
+                    items.push(item)
+                    localStorage.setItem("items",JSON.stringify(item))
+                }
+                else{
+                    const localItems = JSON.parse(localStorage.getItem('items'))
+                    console.log(localItems);
+                    // localItems.map(data =>{
+                    //     items.push(data)
+                    // })
+                    // items.push(item)
+                }
+            }
+            else {
+                console.log('not Working');
+            }
+        })
+    }
+
+   
+
+
+
     //toggle  headBar
     const wishButton = $(".wishItems")
     const wishBar = $(".wishBar")
@@ -81,6 +119,7 @@ $(document).ready(function () {
             bgSearchBar.removeClass('active')
             searchbarMAin.removeClass('active')
             header.style.marginTop = "0px"
+            header.style.opacity = 1
             $(body).removeClass("activeBody")
         }
     }
@@ -157,7 +196,7 @@ $(document).ready(function () {
     // quickview Product
     let quickView = document.querySelector('#quick_view')
     let quickviewItems = document.querySelectorAll('.quick_view--item')
-    let productItemview = document.querySelectorAll('.bestSeller_tabContent--item #view')
+    let productItemview = document.querySelectorAll('.bestSeller_tabContent--item .viewPr')
     productItemview.forEach(product =>{
             product.onclick =(e) =>{
                 e.preventDefault()
@@ -190,4 +229,6 @@ $(document).ready(function () {
             width:$(this).data("ori")
         },1000)
     })
+    
+        
 })
