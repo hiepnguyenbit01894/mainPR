@@ -61,49 +61,48 @@ function renderPrn(products) {
   let item = ""
   for (let product of products) {
     item += `
-        <div class="bestSeller_tabContent--item col-lg-3 col-md-4 col-sm-6 col-6" data-name ="p-${product.id}">
-        <div class="tabContent_item--image">
-        <a href="#">
-        <img src="${product.image}" alt="" class = "imgItem">
-        </a>
+    <div class="bestSeller_tabContent--item col-lg-3 col-md-4 col-sm-6 col-6 itemlc" data-name ="p-${product.id}">
+    <div class="tabContent_item--image">
+    <a href="#">
+    <img src="${product.image}" alt="" class = "imgItem">
+    </a>
+    </div>
+    <div class="tabContent_item--options">
+          <ul class="item_options--main">
+            <li class="item_options viewPr" >
+              <a href="#!" class="item_options--logo">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                  </svg>
+                </a>
+                <span class="item_options--Title viewTitle" >View</span>
+                  </li>
+                  <li class="item_options addtowish" >
+                <a href="#!" class="item_options--logo"> 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                  </svg>
+                </a>
+                <span class="item_options--Title wishTitle" >Add to WishList</span>
+                  </li>
+                  <li class="item_options infor" >
+                <a href="#!" class="item_options--logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+              </svg>
+                </a>
+                <span class="item_options--Title cartTitle">Information</span>
+                  </li>
+          </ul>
         </div>
-        <div class="tabContent_item--options">
-              <ul class="item_options--main">
-                <li class="item_options viewPr" >
-                  <a href="#!" class="item_options--logo">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                      </svg>
-                    </a>
-                    <span class="item_options--Title" id="viewTitle">View</span>
-                      </li>
-                      <li class="item_options addtowish" >
-                    <a href="#!" class="item_options--logo"> 
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
-                      </svg>
-                    </a>
-                    <span class="item_options--Title" id = "wishTitle">Add to WishList</span>
-                      </li>
-                      <li class="item_options addtocart" >
-                    <a href="#!" class="item_options--logo">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-dash" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd" d="M5.5 10a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z"/>
-                      <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
-                    </svg>
-                    </a>
-                    <span class="item_options--Title" id = "cartTitle">Add to Cart</span>
-                      </li>
-              </ul>
-            </div>
-            <h3 class="tabContent_item--name" >
-            <a href="#!" class = "imgName">${product.name}</a>
-            </h3>
-            <p class="tabContent_item--price">
-            $${product.price}.00
-            </p>
-            </div>
-            `
+        <h3 class="tabContent_item--name" >
+        <a href="#!" class = "imgName">${product.name}</a>
+        </h3>
+        <p class="tabContent_item--price">
+        $${product.price}.00
+        </p>
+        </div>
+        `
 
   }
   $('.bestSeller_tabContent--a1 .row ').html(item)
@@ -171,49 +170,48 @@ function renderPrb(products) {
   let item = ""
   for (let product of products) {
     item += `
-        <div class="bestSeller_tabContent--item col-lg-3 col-md-4 col-sm-6 col-6" data-name ="p-${product.id}">
-        <div class="tabContent_item--image">
-        <a href="#">
-        <img src="${product.image}" alt="" class = "imgItem">
-        </a>
+    <div class="bestSeller_tabContent--item col-lg-3 col-md-4 col-sm-6 col-6 itemlc" data-name ="p-${product.id}">
+    <div class="tabContent_item--image">
+    <a href="#">
+    <img src="${product.image}" alt="" class = "imgItem">
+    </a>
+    </div>
+    <div class="tabContent_item--options">
+          <ul class="item_options--main">
+            <li class="item_options viewPr" >
+              <a href="#!" class="item_options--logo">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                  </svg>
+                </a>
+                <span class="item_options--Title viewTitle" >View</span>
+                  </li>
+                  <li class="item_options addtowish" >
+                <a href="#!" class="item_options--logo"> 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                  </svg>
+                </a>
+                <span class="item_options--Title wishTitle" >Add to WishList</span>
+                  </li>
+                  <li class="item_options infor" >
+                <a href="#!" class="item_options--logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+              </svg>
+                </a>
+                <span class="item_options--Title cartTitle">Information</span>
+                  </li>
+          </ul>
         </div>
-        <div class="tabContent_item--options">
-              <ul class="item_options--main">
-                <li class="item_options viewPr" >
-                  <a href="#!" class="item_options--logo">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                      </svg>
-                    </a>
-                    <span class="item_options--Title" id="viewTitle">View</span>
-                      </li>
-                      <li class="item_options addtowish">
-                    <a href="#!" class="item_options--logo"> 
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
-                      </svg>
-                    </a>
-                    <span class="item_options--Title" id = "wishTitle">Add to WishList</span>
-                      </li>
-                      <li class="item_options addtocart" >
-                    <a href="#!" class="item_options--logo">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-dash" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd" d="M5.5 10a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z"/>
-                      <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
-                    </svg>
-                    </a>
-                    <span class="item_options--Title" id = "cartTitle">Add to Cart</span>
-                      </li>
-              </ul>
-            </div>
-            <h3 class="tabContent_item--name">
-            <a href="#!" class = "imgName">${product.name}</a>
-            </h3>
-            <p class="tabContent_item--price">
-            $${product.price}.00
-            </p>
-            </div>
-            `
+        <h3 class="tabContent_item--name" >
+        <a href="#!" class = "imgName">${product.name}</a>
+        </h3>
+        <p class="tabContent_item--price">
+        $${product.price}.00
+        </p>
+        </div>
+        `
   }
   $('.bestSeller_tabContent--a2 .row ').html(item)
 }
@@ -440,7 +438,7 @@ const productShopPage = [
               for (let product of products) {
                 if (product.id > startPage && product.id < endPage) {
                   item += `
-                    <div class="bestSeller_tabContent--item col-lg-3 col-md-4 col-sm-6 col-6 shopItemsList"  data-name ="p-${product.id}">
+                    <div class="bestSeller_tabContent--item col-lg-3 col-md-4 col-sm-6 col-6 shopItemsList itemlc"  data-name ="p-${product.id}">
                         <!-- image Product -->
                         <div class="tabContent_item--image">
                           <a href="#!">
@@ -459,7 +457,7 @@ const productShopPage = [
                                     d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                                 </svg>
                               </a>
-                              <span class="item_options--Title" id="viewTitle">View</span>
+                              <span class="item_options--Title viewTitle" >View</span>
                             </li>
                             <li class="item_options addtowish">
                               <a href="#!" class="item_options--logo">
@@ -469,7 +467,8 @@ const productShopPage = [
                                     d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
                                 </svg>
                               </a>
-                              <span class="item_options--Title" id="wishTitle">Add to WishList</span>
+                              <span class="item_options--Title wishTitle" >Add to WishList</span>
+
                             </li>
                             <li class="item_options addtocart" >
                               <a href="#!" class="item_options--logo">
@@ -480,7 +479,7 @@ const productShopPage = [
                                     d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
                                 </svg>
                               </a>
-                              <span class="item_options--Title" id="cartTitle">Add to Cart</span>
+                              <span class="item_options--Title cartTitle">Information</span>
                             </li>
                           </ul>
                         </div>

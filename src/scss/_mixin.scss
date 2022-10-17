@@ -163,9 +163,9 @@
               transition: all 0.5s ease-in-out;
               color: $textColor;
             }
-            #viewTitle,
-            #wishTitle,
-            #cartTitle {
+            .viewTitle,
+            .wishTitle,
+            .cartTitle {
               visibility: visible;
               opacity: 1;
               transition: all 0.5s ease;
@@ -179,7 +179,7 @@
             text-align: center;
             opacity: 1;
           }
-          #viewTitle {
+          .viewTitle {
             top: -79%;
             left: 1px;
             padding: 5px 10px;
@@ -198,7 +198,7 @@
               border-top: 8px solid rgb(0, 0, 0);
             }
           }
-          #wishTitle {
+          .wishTitle {
             top: -79%;
             left: -49px;
             width: 140px;
@@ -219,7 +219,7 @@
               border-top: 8px solid rgb(0, 0, 0);
             }
           }
-          #cartTitle {
+          .cartTitle {
             top: -79%;
             left: -49px;
             width: 140px;

@@ -33,45 +33,187 @@ $(document).ready(function () {
         bgcartBar.toggleClass('bgactive')
     })
     // ==== Adding data to localstorage
-    let btnAddtoCart = document.getElementsByClassName("addtocart")
-    
-    let items =[]
-    for(let i =0 ;i <btnAddtoCart.length;i++)
-    {
-        btnAddtoCart[i].addEventListener("click",(e)=>{
-            if(typeof(Storage) !== 'undefined')
-            {
-                let item = {
-                    image: e.target.parentElement.parentElement.parentElement.children[0].children[0].src,
-                    name: e.target.parentElement.parentElement.parentElement.children[1].children[0].children[0].innerText,
-                    price: e.target.parentElement.parentElement.parentElement.children[1].children[1].innerText,
-                    quantity: e.target.parentElement.parentElement.parentElement.children[1].children[3].children[0].children[1].value
-                }
-                if(JSON.parse(localStorage.getItem('items')) === null)
-                {
-                    items.push(item)
-                    localStorage.setItem("items",JSON.stringify(item))
-                }
-                else{
-                    const localItems = JSON.parse(localStorage.getItem('items'))
-                    console.log(localItems);
-                    // localItems.map(data =>{
-                    //     items.push(data)
-                    // })
-                    // items.push(item)
-                }
-            }
-            else {
-                console.log('not Working');
-            }
-        })
-    }
+    // let btnAddtoCart = document.getElementsByClassName("addtocart")
+    // let items = []
+    // for (let i = 0; i < btnAddtoCart.length; i++) {
+    //     btnAddtoCart[i].addEventListener("click", (e) => {
+    //         let item = {
+    //             image: e.target.parentElement.parentElement.parentElement.children[0].children[0].src,
+    //             name: e.target.parentElement.parentElement.parentElement.children[1].children[0].children[0].innerText,
+    //             price: e.target.parentElement.parentElement.parentElement.children[1].children[1].innerText,
+    //             totalPrice: parseInt(e.target.parentElement.parentElement.parentElement.children[1].children[1].innerText.slice(1, 3)), //chuyển giá thành số để tính tổng tiền 
+    //             quantity: parseInt(e.target.parentElement.parentElement.parentElement.children[1].children[3].children[0].children[1].value)
+    //         }
+    //         addItemToLocal(item)
+    //     })
+    // }
 
-   
-
-
+    // function addItemToLocal(item) {
+    //     let cartItem = JSON.parse(localStorage.getItem('prdInCart'))
+    //     if (cartItem === null || cartItem.length === 0) {
+    //         items.push(item)
+    //         localStorage.setItem('prdInCart', JSON.stringify(items))
+    //     }
+    //     else {
+    //         cartItem.forEach(data => {
+    //             if (item.name == data.name) {
+    //                 item.quantity += data.quantity 
+    //                 item.totalPrice = data.totalPrice += (item.totalPrice * item.quantity) - item.totalPrice
+    //                 console.log(item.quantity,data.quantity);
+    //                 console.log(item.totalPrice);
+    //             }
+    //             else {
+    //                 items.push(data)
+    //             }
+    //         })
+    //         items.push(item)
+    //     }
+    //     localStorage.setItem('prdInCart', JSON.stringify(items))
+    //     window.location.reload()
+    // }
+    // // render item
+    // function dispCartItem() {
+    //     let html = ''
+    //     let cartItem = JSON.parse(localStorage.getItem('prdInCart'))
+        
+    //         cartItem.forEach(data => {
+    //             html += `<div class="cart_body--product d-flex">
+    //                         <div class="cart_product--image">
+    //                         <img src="${data.image}" alt="">
+    //                         </div>
+                            
+    //                         <div class="cart_product--infor">
+    //                         <h3 class="product_infor--name iitem">
+    //                             <a href="products/Banana.html">
+    //                             ${data.name}
+    //                             </a>
+    //                         </h3>
+    //                         <div class="product_infor--quantity iitem">
+    //                             Qty: ${data.quantity}
+    //                         </div>
+    //                         <div class="product_infor--price iitem">
+    //                             <span> ${data.price}</span>
+    //                         </div>
+    //                         <div class="product_infor--totalPrice iitem">
+    //                         <span> Total :$${data.totalPrice}.00 USD</span>
+    //                         </div>
+    //                         </div>
+    //                         <div class="cart_product--remove">
+    //                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+    //                             <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+    //                             <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+    //                         </svg>
+    //                         </div>
+    //                     </div>`
+    //         })
+    //     document.querySelector('.cart_body--show').innerHTML = html
+    // }
+    // dispCartItem()
+    // // remove item
+    // const removeItem =document.getElementsByClassName('cart_product--remove')
+    // for(let i =0;i < removeItem.length;i++ ){
+    //     let removeBtn = removeItem[i]
+    //     removeBtn.addEventListener('click',(e)=>{
+    //         let cartItem = JSON.parse(localStorage.getItem('prdInCart'))
+    //         console.log(e.target);
+    //         cartItem.forEach(data =>{
+    //             if(data.name != e.target.parentElement.parentElement.children[1].children[0].children[0].innerText)
+    //             {
+    //                 items.push(data)
+    //             }
+    //         })
+    //         localStorage.setItem('prdInCart', JSON.stringify(items))
+    //         window.location.reload()
+    //     })
+    // }
+    // // Total price
+    // function totalCart(){
+    //     let subTotal =0
+    //     let cartItem = JSON.parse(localStorage.getItem('prdInCart'))
+    //     cartItem.forEach(data =>{
+    //         subTotal = data.totalPrice += subTotal
+    //     })
+    //     document.querySelector('.cartBar_main--total .float-right').innerText = `$${subTotal}.00`
+    // }
+    // totalCart()
 
     //toggle  headBar
+    
+    let btnAddtoCart = document.getElementsByClassName("addtocart")
+    let Cart = new Array()
+    for (let i = 0; i < btnAddtoCart.length; i++) {
+        btnAddtoCart[i].addEventListener("click", (e) => {
+            let image= e.target.parentElement.parentElement.parentElement.children[0].children[0].src
+            let name = e.target.parentElement.parentElement.parentElement.children[1].children[0].children[0].innerText
+            let price = e.target.parentElement.parentElement.parentElement.children[1].children[1].innerText
+            let quantity =parseInt(e.target.parentElement.parentElement.parentElement.children[1].children[3].children[0].children[1].value)
+            let item = new Array(image,name,price,quantity )
+            
+            let check = 0 //flag to check 
+            for(let i = 0; i < Cart.length;i++)
+            {
+                console.log(name);
+                if(Cart[i][1] == name)
+                {
+                    check = 1
+                    quantity += parseInt(Cart[i][3])
+                    Cart[i][3] = quantity
+                    break
+                }
+                
+            }
+            if(check == 0)
+            {
+                Cart.push(item)
+            }
+            showCart()
+            // save product to sessionStorage
+            sessionStorage.setItem("Cart", JSON.stringify(Cart))
+
+        })
+    }
+    function showCart(){
+        let html = ''
+        let totalPrs = 0
+        for(let i =0; i< Cart.length;i++)
+        {
+            let priceProduct =  parseInt(Cart[i][2].slice(1,3)) *  Cart[i][3]
+            totalPrs += priceProduct
+            html  += `<div class="cart_body--product d-flex">
+                            <div class="cart_product--image">
+                            <img src="${Cart[i][0]}" alt="">
+                            </div>   
+                            <div class="cart_product--infor">
+                            <h3 class="product_infor--name iitem">
+                                <a href="products/Banana.html">
+                                ${Cart[i][1]}
+                                </a>
+                            </h3>
+                            <div class="product_infor--quantity iitem">
+                                Qty: ${Cart[i][3]}
+                            </div>
+                            <div class="product_infor--price iitem">
+                                <span> ${Cart[i][2]}</span>
+                            </div>
+                            <div class="product_infor--totalPrice iitem">
+                            <span> Total :$${priceProduct}.00 USD</span>
+                            </div>
+                            </div>
+                            <div class="cart_product--remove">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                            </svg>
+                            </div>
+                        </div>`
+                        console.log();
+        }
+        document.querySelector('.cartBar_main--total .float-right').innerText = `$${totalPrs}.00`
+        document.querySelector('.cart_body--show').innerHTML = html
+    }
+    
+
+    // =======================
     const wishButton = $(".wishItems")
     const wishBar = $(".wishBar")
     const bgwishBar = $(".bgwishBar")
@@ -142,7 +284,7 @@ $(document).ready(function () {
                     $(".tabContent_item--price", a).data(`${val}`) - $(".tabContent_item--price", b).data(`${val}`)
                 )
             }
-            else{
+            else {
                 return (
                     $(".tabContent_item--price", b).data(`${val}`) - $(".tabContent_item--price", a).data(`${val}`)
                 )
@@ -150,7 +292,7 @@ $(document).ready(function () {
         })
         $(".shopContent_list .row").append(itemsShop)
     }
-    
+
     // ==========================
     function sortAlpha(val) {
         let itemsShop = $(".shopItemsList")
@@ -168,13 +310,13 @@ $(document).ready(function () {
     function main() {
         let sorting = $("#sort").val()
         if (sorting == "h2l") {
-            sort('price',"hyhy")
+            sort('price', "hyhy")
         }
         else if (sorting == "l2h") {
-            sort('price',"")
+            sort('price', "")
         }
         else if (sorting == "default") {
-            sort('id',"")
+            sort('id', "")
         }
         else if (sorting == "a2z") {
             sortAlpha("a2z")
@@ -197,38 +339,37 @@ $(document).ready(function () {
     let quickView = document.querySelector('#quick_view')
     let quickviewItems = document.querySelectorAll('.quick_view--item')
     let productItemview = document.querySelectorAll('.bestSeller_tabContent--item .viewPr')
-    productItemview.forEach(product =>{
-            product.onclick =(e) =>{
-                e.preventDefault()
-                quickView.style.opacity = '1'
-                quickView.style.visibility = 'visible'
-                quickviewItems.forEach(item =>{
-                    let name = product.parentElement.parentElement.parentElement.getAttribute('data-name')
-                    let target = item.getAttribute('data-target')
-                    if(name == target)
-                        {
-                            item.classList.add('activeQv')   
-                        }
-                })
-            }
+    productItemview.forEach(product => {
+        product.onclick = (e) => {
+            e.preventDefault()
+            quickView.style.opacity = '1'
+            quickView.style.visibility = 'visible'
+            quickviewItems.forEach(item => {
+                let name = product.parentElement.parentElement.parentElement.getAttribute('data-name')
+                let target = item.getAttribute('data-target')
+                if (name == target) {
+                    item.classList.add('activeQv')
+                }
+            })
+        }
     })
-    
-    quickviewItems.forEach(close =>{
-        close.querySelector('.bi-x-lg').onclick =(e)=>{
-                close.classList.remove('activeQv')
-                quickView.style.opacity = '0'
-                quickView.style.visibility = 'hidden'
+
+    quickviewItems.forEach(close => {
+        close.querySelector('.bi-x-lg').onclick = (e) => {
+            close.classList.remove('activeQv')
+            quickView.style.opacity = '0'
+            quickView.style.visibility = 'hidden'
         }
     })
     // progesbar 
-    $(".progess_bar--main").each(function(){
+    $(".progess_bar--main").each(function () {
         $(this)
-        .data("ori",$(this).width())
-        .width(0)
-        .animate({
-            width:$(this).data("ori")
-        },1000)
+            .data("ori", $(this).width())
+            .width(0)
+            .animate({
+                width: $(this).data("ori")
+            }, 1000)
     })
-    
-        
+
+
 })
