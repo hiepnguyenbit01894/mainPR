@@ -32,113 +32,7 @@ $(document).ready(function () {
         cartBar.toggleClass('contentActive')
         bgcartBar.toggleClass('bgactive')
     })
-    // ==== Adding data to localstorage
-    // let btnAddtoCart = document.getElementsByClassName("addtocart")
-    // let items = []
-    // for (let i = 0; i < btnAddtoCart.length; i++) {
-    //     btnAddtoCart[i].addEventListener("click", (e) => {
-    //         let item = {
-    //             image: e.target.parentElement.parentElement.parentElement.children[0].children[0].src,
-    //             name: e.target.parentElement.parentElement.parentElement.children[1].children[0].children[0].innerText,
-    //             price: e.target.parentElement.parentElement.parentElement.children[1].children[1].innerText,
-    //             totalPrice: parseInt(e.target.parentElement.parentElement.parentElement.children[1].children[1].innerText.slice(1, 3)), //chuyển giá thành số để tính tổng tiền 
-    //             quantity: parseInt(e.target.parentElement.parentElement.parentElement.children[1].children[3].children[0].children[1].value)
-    //         }
-    //         addItemToLocal(item)
-    //     })
-    // }
 
-    // function addItemToLocal(item) {
-    //     let cartItem = JSON.parse(localStorage.getItem('prdInCart'))
-    //     if (cartItem === null || cartItem.length === 0) {
-    //         items.push(item)
-    //         localStorage.setItem('prdInCart', JSON.stringify(items))
-    //     }
-    //     else {
-    //         cartItem.forEach(data => {
-    //             if (item.name == data.name) {
-    //                 item.quantity += data.quantity 
-    //                 item.totalPrice = data.totalPrice += (item.totalPrice * item.quantity) - item.totalPrice
-    //                 console.log(item.quantity,data.quantity);
-    //                 console.log(item.totalPrice);
-    //             }
-    //             else {
-    //                 items.push(data)
-    //             }
-    //         })
-    //         items.push(item)
-    //     }
-    //     localStorage.setItem('prdInCart', JSON.stringify(items))
-    //     window.location.reload()
-    // }
-    // // render item
-    // function dispCartItem() {
-    //     let html = ''
-    //     let cartItem = JSON.parse(localStorage.getItem('prdInCart'))
-        
-    //         cartItem.forEach(data => {
-    //             html += `<div class="cart_body--product d-flex">
-    //                         <div class="cart_product--image">
-    //                         <img src="${data.image}" alt="">
-    //                         </div>
-                            
-    //                         <div class="cart_product--infor">
-    //                         <h3 class="product_infor--name iitem">
-    //                             <a href="products/Banana.html">
-    //                             ${data.name}
-    //                             </a>
-    //                         </h3>
-    //                         <div class="product_infor--quantity iitem">
-    //                             Qty: ${data.quantity}
-    //                         </div>
-    //                         <div class="product_infor--price iitem">
-    //                             <span> ${data.price}</span>
-    //                         </div>
-    //                         <div class="product_infor--totalPrice iitem">
-    //                         <span> Total :$${data.totalPrice}.00 USD</span>
-    //                         </div>
-    //                         </div>
-    //                         <div class="cart_product--remove">
-    //                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-    //                             <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-    //                             <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
-    //                         </svg>
-    //                         </div>
-    //                     </div>`
-    //         })
-    //     document.querySelector('.cart_body--show').innerHTML = html
-    // }
-    // dispCartItem()
-    // // remove item
-    // const removeItem =document.getElementsByClassName('cart_product--remove')
-    // for(let i =0;i < removeItem.length;i++ ){
-    //     let removeBtn = removeItem[i]
-    //     removeBtn.addEventListener('click',(e)=>{
-    //         let cartItem = JSON.parse(localStorage.getItem('prdInCart'))
-    //         console.log(e.target);
-    //         cartItem.forEach(data =>{
-    //             if(data.name != e.target.parentElement.parentElement.children[1].children[0].children[0].innerText)
-    //             {
-    //                 items.push(data)
-    //             }
-    //         })
-    //         localStorage.setItem('prdInCart', JSON.stringify(items))
-    //         window.location.reload()
-    //     })
-    // }
-    // // Total price
-    // function totalCart(){
-    //     let subTotal =0
-    //     let cartItem = JSON.parse(localStorage.getItem('prdInCart'))
-    //     cartItem.forEach(data =>{
-    //         subTotal = data.totalPrice += subTotal
-    //     })
-    //     document.querySelector('.cartBar_main--total .float-right').innerText = `$${subTotal}.00`
-    // }
-    // totalCart()
-
-    //toggle  headBar
-    
     let btnAddtoCart = document.getElementsByClassName("addtocart")
     let Cart = new Array()
     for (let i = 0; i < btnAddtoCart.length; i++) {
@@ -214,6 +108,8 @@ $(document).ready(function () {
     
 
     // =======================
+    //toggle  headBar
+
     const wishButton = $(".wishItems")
     const wishBar = $(".wishBar")
     const bgwishBar = $(".bgwishBar")
