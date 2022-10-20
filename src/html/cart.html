@@ -2,254 +2,245 @@
 <html lang="en">
 
 <head>
-    <title>Main</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Cart</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS v5.2.0-beta1 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <!-- CSS -->
-    <link rel="stylesheet" href="/src/scss/index.css">
-    <link rel="stylesheet" href="/src/scss/reset.css">
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <!-- owl Carousel -->
-    <link rel="stylesheet" href="/src/scss/owl.carousel.min.css">
-    <link rel="stylesheet" href="/src/scss/owl.theme.default.min.css">
+  <!-- Bootstrap CSS v5.2.0-beta1 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/src/scss/index.css">
+  <link rel="stylesheet" href="/src/scss/reset.css">
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <!-- owl Carousel -->
+  <link rel="stylesheet" href="/src/scss/owl.carousel.min.css">
+  <link rel="stylesheet" href="/src/scss/owl.theme.default.min.css">
 </head>
 
 <body>
-    <header id="header" class="bg-light">
-        <div class="container container-v1">
-            <div class="row d-flex align-items-center">
-                <div class="col-md-2 py-4" id="navbrand">
-                    <a href="#">
-                        <img src="https://cdn.shopify.com/s/files/1/0594/1696/9392/files/logo.png?v=1629866780" alt=""
-                            width="140">
-                    </a>
-                </div>
-                <div class="col-md-8 d-flex justify-content-center px-2" id="navList">
-                    <nav class="navbar navbar-expand-md  p-0 text-center j">
-                        <div class="collapse navbar-collapse">
-                            <ul class="navbar-nav d-flex fw-bolder" id="navbar-nav">
-                                <li class="nav-link " aria-current="page">
-                                    <a href="#">Home</a>
-                                </li>
-                                <li class="nav-link" href="#">
-                                    <a class="shopLink" href="#">Shop</a>
-                                </li>
-                                <li class="nav-link ">
-                                    <a href="#">Blogs</a>
-                                </li>
-                                <li class="nav-link ">
-                                    <a href="#">Reviews</a>
-                                </li>
-                                <li class="nav-link" href="#">
-                                    <a href="#">About us</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-                <div class="col-md-2 currencies-login">
-                    <div class="cart-login-search align-items-center">
-                        <ul class="list-inline list-unstyled mb-0">
-                            <li class="list-inline-item searchItems mr-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-search" viewBox="0 0 16 16">
-                                    <path
-                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                                </svg>
-                            </li>
-                            <li class="list-inline-item loginForm mr-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-person" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
-                                </svg>
-                                <ul class="loginform_dropdown">
-                                    <div class="loginform_dropdown--main">
-                                        <div class="loginform_item--Login">
-                                            <a href="#"> Login</a>
-                                        </div>
-                                        <div class="loginform_item--Register">
-                                            <a href="#">Register</a>
-                                        </div>
-                                    </div>
-                                </ul>
-                            </li>
-                            <li class="list-inline-item wishItems mr-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-heart" viewBox="0 0 16 16">
-                                    <path
-                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-                                </svg>
-                            </li>
-                            <li class="list-inline-item cartItems mr-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-bag-dash" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M5.5 10a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z" />
-                                    <path
-                                        d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-                                </svg>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+  <header id="header" class="bg-light">
+    <div class="container container-v1">
+      <div class="row d-flex align-items-center">
+        <div class="col-md-2 py-4" id="navbrand">
+          <a href="#">
+            <img src="https://cdn.shopify.com/s/files/1/0594/1696/9392/files/logo.png?v=1629866780" alt="" width="140">
+          </a>
         </div>
-        <!-- Mobile  -->
-        <div class="menuMoblie align-items-center">
-            <div class="menu_overlay">
+        <div class="col-md-8 d-flex justify-content-center px-2" id="navList">
+          <nav class="navbar navbar-expand-md  p-0 text-center j">
+            <div class="collapse navbar-collapse">
+              <ul class="navbar-nav d-flex fw-bolder" id="navbar-nav">
+                <li class="nav-link " aria-current="page">
+                  <a href="#">Home</a>
+                </li>
+                <li class="nav-link" href="#">
+                  <a class="shopLink" href="#">Shop</a>
+                </li>
+                <li class="nav-link ">
+                  <a href="#">Blogs</a>
+                </li>
+                <li class="nav-link ">
+                  <a href="#">Reviews</a>
+                </li>
+                <li class="nav-link" href="#">
+                  <a href="#">About us</a>
+                </li>
+              </ul>
             </div>
-            <a href="#" class="menuMobile_left">
-                <span class="menumobile_left--logo">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-list" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-                    </svg>
-                </span>
-            </a>
-            <div class="menuMobile_logo">
-                <div class="menuMobile_logo--main">
-                    <a href="#">
-                        <img src="https://cdn.shopify.com/s/files/1/0594/1696/9392/files/logo.png?v=1629866780" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="menuMobile_right">
-                <span class="searchItems">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
-                        class="bi bi-search" viewBox="0 0 16 16">
-                        <path
-                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                    </svg>
-                </span>
-                <span class="loginForm mr-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-person" viewBox="0 0 16 16">
-                        <path
-                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
-                    </svg>
-                    <ul class="loginform_dropdown">
-                        <div class="loginform_dropdown--main">
-                            <div class="loginform_item--Login">
-                                <a href="#"> Login</a>
-                            </div>
-                            <div class="loginform_item--Register">
-                                <a href="#">Register</a>
-                            </div>
-                        </div>
-                    </ul>
-                </span>
-                <span class="wishItems">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-heart" viewBox="0 0 16 16">
-                        <path
-                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
-                    </svg>
-                </span>
-                <span class="cartItems">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
-                        class="bi bi-bag-dash" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M5.5 10a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z" />
-                        <path
-                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-                    </svg>
-                </span>
-            </div>
+          </nav>
         </div>
-        <nav class="navMobile">
-            <div class="navMobile_logo">
-                <div class="logoMenu">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-x-lg" viewBox="0 0 16 16">
-                        <path
-                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-                    </svg>
-                </div>
-            </div>
-            <div class="navMobile_content">
-                <ul class="tabContent" id="tabMenuMobile">
-                    <li class="tabMenuMoblie_item">
-                        <span class="item--title">Home</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-arrow-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-                        </svg>
-                    </li>
-                    <li class="tabMenuMoblie_item">
-                        <span class="item--title">Shop</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-arrow-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-                        </svg>
-                    </li>
-                    <li class="tabMenuMoblie_item">
-                        <span class="item--title">Featured</span>
-
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-arrow-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-                        </svg>
-                    </li>
-                    <li class="tabMenuMoblie_item">
-                        <span class="item--title">Pages</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-arrow-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-                        </svg>
-                    </li>
-                    <li class="tabMenuMoblie_item">
-                        <span class="item--title">Blogs</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-arrow-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
-                        </svg>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <!-- Header Hidden -->
-    <!-- Searchbar -->
-    <div class="searchBar ">
-        <div class="searchBar--main align-content-center col-12">
-            <div class="searchBar-title">
-                <h3 class="searchBar-title--main">Start typing and hit Enter</h3>
-            </div>
-            <form class="searchBar-form" action="/search">
-                <input type="text" placeholder="Search anything" class="searchBar-form--input">
-                <button type="submit" class="searchBar-form--button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                        class="bi bi-search" viewBox="0 0 16 16">
-                        <path
-                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                    </svg>
-                </button>
-            </form>
-            <div class="searchBar--exit">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+        <div class="col-md-2 currencies-login">
+          <div class="cart-login-search align-items-center">
+            <ul class="list-inline list-unstyled mb-0">
+              <li class="list-inline-item searchItems mr-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                 </svg>
+              </li>
+              <li class="list-inline-item loginForm mr-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                </svg>
+                <ul class="loginform_dropdown">
+                  <div class="loginform_dropdown--main">
+                    <div class="loginform_item--Login">
+                      <a href="#"> Login</a>
+                    </div>
+                    <div class="loginform_item--Register">
+                      <a href="#">Register</a>
+                    </div>
+                  </div>
+                </ul>
+              </li>
+              <li class="list-inline-item wishItems mr-0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                </svg>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile  -->
+    <div class="menuMoblie align-items-center">
+      <div class="menu_overlay">
+      </div>
+      <a href="#" class="menuMobile_left">
+        <span class="menumobile_left--logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+          </svg>
+        </span>
+      </a>
+      <div class="menuMobile_logo">
+        <div class="menuMobile_logo--main">
+          <a href="#">
+            <img src="https://cdn.shopify.com/s/files/1/0594/1696/9392/files/logo.png?v=1629866780" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="menuMobile_right">
+        <span class="searchItems">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-search"
+            viewBox="0 0 16 16">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg>
+        </span>
+        <span class="loginForm mr-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person"
+            viewBox="0 0 16 16">
+            <path
+              d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+          </svg>
+          <ul class="loginform_dropdown">
+            <div class="loginform_dropdown--main">
+              <div class="loginform_item--Login">
+                <a href="#"> Login</a>
+              </div>
+              <div class="loginform_item--Register">
+                <a href="#">Register</a>
+              </div>
             </div>
-            <div class="searchBar--result">
-                <p class="col-12">You must enter at least 2 characters.</p>
-                <div class="searchBar-result--main d-flex row">
-                    <!-- <div class="result_main--product">
+          </ul>
+        </span>
+        <span class="wishItems">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart"
+            viewBox="0 0 16 16">
+            <path
+              d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+          </svg>
+        </span>
+        <span class="cartItems">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-bag-dash"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M5.5 10a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z" />
+            <path
+              d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+          </svg>
+        </span>
+      </div>
+    </div>
+    <nav class="navMobile">
+      <div class="navMobile_logo">
+        <div class="logoMenu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+            viewBox="0 0 16 16">
+            <path
+              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+          </svg>
+        </div>
+      </div>
+      <div class="navMobile_content">
+        <ul class="tabContent" id="tabMenuMobile">
+          <li class="tabMenuMoblie_item">
+            <span class="item--title">Home</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+            </svg>
+          </li>
+          <li class="tabMenuMoblie_item">
+            <span class="item--title">Shop</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+            </svg>
+          </li>
+          <li class="tabMenuMoblie_item">
+            <span class="item--title">Featured</span>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+            </svg>
+          </li>
+          <li class="tabMenuMoblie_item">
+            <span class="item--title">Pages</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+            </svg>
+          </li>
+          <li class="tabMenuMoblie_item">
+            <span class="item--title">Blogs</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
+            </svg>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Header Hidden -->
+  <!-- Searchbar -->
+  <div class="searchBar ">
+    <div class="searchBar--main align-content-center col-12">
+      <div class="searchBar-title">
+        <h3 class="searchBar-title--main">Start typing and hit Enter</h3>
+      </div>
+      <form class="searchBar-form" action="/search">
+        <input type="text" placeholder="Search anything" class="searchBar-form--input">
+        <button type="submit" class="searchBar-form--button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search"
+            viewBox="0 0 16 16">
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+          </svg>
+        </button>
+      </form>
+      <div class="searchBar--exit">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+          viewBox="0 0 16 16">
+          <path
+            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+        </svg>
+      </div>
+      <div class="searchBar--result">
+        <p class="col-12">You must enter at least 2 characters.</p>
+        <div class="searchBar-result--main d-flex row">
+          <!-- <div class="result_main--product">
               <div class="col-lg-4 col-sm-6 col-md-6">
                 <div class="result_product">
                   <a href="#!" class="result_product--image">
@@ -264,107 +255,135 @@
                 </div>
               </div> 
             </div> -->
-                </div>
-            </div>
         </div>
-        <div class="bgSearchBar">
-        </div>
+      </div>
     </div>
-    <!-- Cart -->
-    <div class="cartBar">
-        <div class="cartBar_main">
-            <div class="cartBar_main--head d-flex justify-content-between align-items-center">
-                <a href="#" class="cartBar_head--exit">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-x-lg " viewBox="0 0 16 16">
-                        <path
-                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-                    </svg>
-                </a>
-                <h3 class="cartBar_head--title fw-bold">Shopping Cart</h3>
-                <div class="cartBar_head--count">
-                    <span class="cart_counter">0</span>
-                </div>
-            </div>
-            <div class="cartBar_main--body d-flex flex-column align-items-center ">
-                <div class="cart_body--hide text-center">
-                    <div class="cartBar_body--image ">
-                        <img src="/src/image/Cart-empty.png" alt="">
+    <div class="bgSearchBar">
+    </div>
+  </div>
+  <!-- Cart -->
+ 
+  <!-- wish List -->
+  <div class="wishBar">
+    <div class="wishBar_main">
+      <div class="wishBar_main--head d-flex justify-content-between align-items-center">
+        <a href="#" class="wishBar_head--exit">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg "
+            viewBox="0 0 16 16">
+            <path
+              d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+          </svg>
+        </a>
+        <h3 class="wishBar_head--title fw-bold">Wish List</h3>
+        <div class="wishBar_head--count">
+          <span class="cart_counter">0</span>
+        </div>
+      </div>
+      <div class="wishBar_main--body d-flex flex-column align-items-center ">
+        <div class="wishBar_body--image ">
+          <img src="/src/image/images.png" alt="">
+        </div>
+        <h4 class="wishBar_body--noti">You haven't saved something yet</h4>
+        <a href="#" class="wishBar_body--tocart"> Go to the Shop</a>
+      </div>
+    </div>
+  </div>
+  <div class="bgwishBar"></div>
+  <!-- cartbody  -->
+  <section id="cartBody">
+    <div class="container container-v2 ">
+      <div class="cartBody_nav">
+        <a href="#!" title="Back to the Home">Home
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+          </svg>
+        </a>
+        <strong> Your Shopping Cart </strong>
+      </div>
+      <div class="cartBody_page">
+        <div class="content_page">
+          <div class="container container-v2 ">
+            <div class="cartBody_main">
+              <form action="/cart">
+                <table class="table-responsive shop_table cart table" >
+                  <thead>
+                    <tr class="cart-title">
+                      <th colspan="2" class="product-thumbnail">Product name</th>
+                      <th class="product-price">Price</th>
+                      <th class="product-quantity">Quantity</th>
+                      <th class="product-subtotal">Total</th>
+                      <th class="product-remove"></th>
+                    </tr>
+                  </thead>
+                  <tbody id="mycart">
+                    <!-- <tr class="cart-item">
+                      <td data-label="Product Name" class="product-thumbnail">
+                        <a href="">
+                          <img src="/src/image/apple.jpg" alt="">
+                        </a>
+                      </td>
+                      <td class="product-name-thumb" data-title="Product">
+                        <a href="#!">Apple</a>
+                      </td>
+                      <td data-label="Product Price" class="product-price" data-title="Price">
+                        <span class="amount">$45.00</span>
+                      </td>
+                      <td data-label="Quantity" class="product-quantity" data-title="Quantity">
+                        <div class="input-group"><span class="input-group-btn"><button type="button"
+                              class="btn btn-default">-</button></span><input type="text" step="1" max="10" value="1"
+                            name="quantity" class="quantity-field  text-center"
+                            style="text-align: center;"><span class="input-group-btn"><button type="button"
+                              class="btn btn-default">+</button></span>
+                        </div>
+                      </td>
+                      <td data-label="Sub Total" class="product-subtotal" data-title="Total">
+                        <span class="amount">$45.00</span>
+                      </td>
+                      <td class="product-remove">
+                        <a class="remove " href="">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-trash" viewBox="0 0 16 16">
+                            <path
+                              d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                            <path fill-rule="evenodd"
+                              d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                          </svg></a>
+                      </td>
+                    </tr> -->
+                  </tbody>
+                </table>
+                <div class="cart_totals ">
+                  <div class="cart-update">
+                    <input value="Update Cart"  name="update_cart" class="buttonUpdate bg-color">
+                  </div>
+                  <div class="continue-shopping-1">
+                    <a href="/collections/all">Continue Shopping</a>
+                  </div>
+                  <div class="cart-check">
+                    <h2 class="cart-title">CART TOTALS</h2>
+                    <table class="total-checkout">
+                      <tbody>
+                        <tr>
+                          <th class="cart-label"><span>Total</span></th>
+                          <td class="cart-amount"><span><strong><span id="amount">$45.00</span></strong> </span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="proceed-to-checkout clearfix">
+                      <a class="checkout-button button alt wc-forward bg-color" href="/checkout">Proceed to checkout</a>
                     </div>
-                    <h4 class="cartBar_body--noti">Your cart is Empty</h4>
-                    <a href="#" class="cartBar_body--tocart"> Go to the Shop</a>
-                </div>
-                <div class="cart_body--show">
-                    <!-- <div class="cart_body--product d-flex">
-                <div class="cart_product--image">
-                  <img src="/src/image/banana.jpg" alt="">
-                </div>
-                <div class="cart_product--infor">
-                  <h3 class="product_infor--name iitem">
-                    <a href="products/Banana.html">
-                      Banana
-                    </a>
-                  </h3>
-                  <div class="product_infor--quantity iitem">
-                    Qty: 1
-                  </div>
-                  <div class="product_infor--price iitem">
-                    <span>$45.00</span>
-                  </div>
-                  <div class="product_infor--totalPrice iitem">
-                    From: FruitBee
                   </div>
                 </div>
-                <div class="cart_product--remove">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-                    <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
-                  </svg>
-                </div>
-              </div> -->
-                </div>
+              </form>
             </div>
-            <div class="cartBar_main--footer">
-                <div class="cartBar_main--total">
-                    <span class="total-title float-left">Total:</span>
-                    <span class="total-price float-right">$100.00</span>
-                </div>
-                <div class="cartBar_main--viewCart">
-                    <a href="#!" class="button-viewcart">
-                        <span>View cart</span>
-                    </a>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
-    <div class="bgcartBar"></div>
-    <!-- wish List -->
-    <div class="wishBar">
-        <div class="wishBar_main">
-            <div class="wishBar_main--head d-flex justify-content-between align-items-center">
-                <a href="#" class="wishBar_head--exit">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-x-lg " viewBox="0 0 16 16">
-                        <path
-                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-                    </svg>
-                </a>
-                <h3 class="wishBar_head--title fw-bold">Wish List</h3>
-                <div class="wishBar_head--count">
-                    <span class="cart_counter">0</span>
-                </div>
-            </div>
-            <div class="wishBar_main--body d-flex flex-column align-items-center ">
-                <div class="wishBar_body--image ">
-                    <img src="/src/image/images.png" alt="">
-                </div>
-                <h4 class="wishBar_body--noti">You haven't saved something yet</h4>
-                <a href="#" class="wishBar_body--tocart"> Go to the Shop</a>
-            </div>
-        </div>
-    </div>
-    <div class="bgwishBar"></div>
-    <!-- footer -->
+  </section>
+  <!-- footer -->
   <footer id="footer">
     <!-- place footer here -->
     <div class="container container-v4">
@@ -494,27 +513,29 @@
     </div>
   </footer>
 
-    <!-- LINK JS -->
-    <!-- Jquery,Popper  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
-        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr..9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <!-- file normal & carousel -->
-    <script src="/src/js/index.js"></script>
-    <script src="/src/js/carousel.js"></script>
-    <script src="/src/js/owl.carousel.min.js"></script>
-    <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
-        </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
-        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
-        </script>
-    <!-- spinner custome quickview -->
-    <script src="/src/js/bootstrap-number-input.js"></script>
+  <!-- LINK JS -->
+  <!-- Jquery,Popper  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr..9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <!-- file normal & carousel -->
+  <script src="/src/js/index.js"></script>
+  <script src="/src/js/quickview.js"></script>
+  <script src="/src/js/addCart.js"></script>
+  <script src="/src/js/carousel.js"></script>
+  <script src="/src/js/owl.carousel.min.js"></script>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+    integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous">
+    </script>
+  <!-- spinner custome quickview -->
+  <script src="/src/js/bootstrap-number-input.js"></script>
 </body>
 
 </html>

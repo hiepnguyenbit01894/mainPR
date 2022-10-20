@@ -32,7 +32,6 @@ $(document).ready(function () {
         cartBar.toggleClass('contentActive')
         bgcartBar.toggleClass('bgactive')
     })
-
     let btnAddtoCart = document.getElementsByClassName("addtocart")
     let Cart = new Array()
     for (let i = 0; i < btnAddtoCart.length; i++) {
@@ -46,7 +45,6 @@ $(document).ready(function () {
             let check = 0 //flag to check 
             for(let i = 0; i < Cart.length;i++)
             {
-                console.log(name);
                 if(Cart[i][1] == name)
                 {
                     check = 1
@@ -63,7 +61,7 @@ $(document).ready(function () {
             showCart()
             // save product to sessionStorage
             sessionStorage.setItem("Cart", JSON.stringify(Cart))
-
+            
         })
     }
     function showCart(){
@@ -105,7 +103,8 @@ $(document).ready(function () {
         document.querySelector('.cartBar_main--total .float-right').innerText = `$${totalPrs}.00`
         document.querySelector('.cart_body--show').innerHTML = html
     }
-    
+   
+
 
     // =======================
     //toggle  headBar
@@ -257,7 +256,7 @@ $(document).ready(function () {
             quickView.style.visibility = 'hidden'
         }
     })
-    // progesbar 
+    // progessbar 
     $(".progess_bar--main").each(function () {
         $(this)
             .data("ori", $(this).width())
@@ -266,6 +265,4 @@ $(document).ready(function () {
                 width: $(this).data("ori")
             }, 1000)
     })
-
-
-})
+    })
