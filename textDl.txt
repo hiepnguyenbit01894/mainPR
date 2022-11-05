@@ -3,15 +3,13 @@
 - trang blog (checked)
 - trang đơn sản phẩm (checked)
 - trang đăng nhập, đăng ký (checked)
-- trang giỏ hàng (JS,session storage)  (loading)
+- phần search filter(checked)
 + thêm giỏ hàng (checked)
 + update giỏ hàng(checked)
++ thêm vào session storage (checked)
++ render ra trang mới (checked)
 + thêm thông báo khi add giỏ hàng thành công (tắt quickview khi thêm thành công)
-+ xóa sản phẩm 
-+ thêm vào session storage
-
-//=> + render ra trang mới (đang làm)
-
-- phần search filter(checked)
-- gán link cho từng trang
-
++ xóa sản phẩm(checked) 
+- gán link cho từng trang(checked)
+- làm trang checkout(checked)
+- xử lý thêm vào cart cho các trang khác 

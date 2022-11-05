@@ -33,6 +33,7 @@ $(document).ready(function () {
         bgcartBar.toggleClass('bgactive')
     })
     let btnAddtoCart = document.getElementsByClassName("addtocart")
+    console.log(btnAddtoCart);
     let Cart = new Array()
     for (let i = 0; i < btnAddtoCart.length; i++) {
         btnAddtoCart[i].addEventListener("click", (e) => {
@@ -41,7 +42,6 @@ $(document).ready(function () {
             let price = e.target.parentElement.parentElement.parentElement.children[1].children[1].innerText
             let quantity =parseInt(e.target.parentElement.parentElement.parentElement.children[1].children[3].children[0].children[1].value)
             let item = new Array(image,name,price,quantity )
-            
             let check = 0 //flag to check 
             for(let i = 0; i < Cart.length;i++)
             {
@@ -260,9 +260,12 @@ $(document).ready(function () {
     $(".progess_bar--main").each(function () {
         $(this)
             .data("ori", $(this).width())
-            .width(0)
+            // .width(10)
             .animate({
                 width: $(this).data("ori")
             }, 1000)
     })
     })
+    $('#btntest').on('click', function () {
+        $('#exampleModalCenter').modal('show')
+      })
