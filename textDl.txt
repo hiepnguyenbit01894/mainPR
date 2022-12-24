@@ -13,3 +13,4 @@
 - gán link cho từng trang(checked)
 - làm trang checkout(checked)
 - xử lý thêm vào cart cho các trang khác 
+- xử lý trang checkout

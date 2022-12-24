@@ -407,7 +407,7 @@
                             </th>
                         </thead>
                         <tbody class="product_table--body">
-                            <tr class="product_item">
+                            <!-- <tr class="product_item">
                                 <td class="product_image">
                                     <div class="product-thumbnail">
                                         <div class="product-thumbnail__wrapper">
@@ -428,29 +428,7 @@
                                 <td class="product_price">
                                     <span class="">$35.00</span>
                                 </td>
-                            </tr>
-                            <tr class="product_item">
-                                <td class="product_image">
-                                    <div class="product-thumbnail">
-                                        <div class="product-thumbnail__wrapper">
-                                            <img alt="Kiwi - S" class="product-thumbnail__image"
-                                                src="//cdn.shopify.com/s/files/1/0594/1696/9392/products/8.1_small.jpg?v=1629680404">
-                                        </div>
-                                        <span class="product-thumbnail_quantity">1</span>
-                                    </div>
-                                </td>
-                                <th class="product__description">
-                                    <span class="product__description__name">Kiwi</span>
-                                </th>
-                                <td class="product_quantity">
-                                    <span class="hidden">
-                                        1
-                                    </span>
-                                </td>
-                                <td class="product_price">
-                                    <span class="">$35.00</span>
-                                </td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                     <div class="total-table distance">
@@ -467,7 +445,7 @@
                                 <tr class="total-line total-line--subtotal">
                                     <th class="total-line__name">Subtotal</th>
                                     <td class="total-line__price">
-                                        <span class="PriceMount">
+                                        <span class="PriceMount" id="PriceMount">
                                             $400.00
                                         </span>
                                     </td>
@@ -490,7 +468,7 @@
                                         Estimated taxes
                                     </th>
                                     <td class="total-line__price">
-                                        <span class="PriceMount">$40.00</span>
+                                        <span class="PriceMount" id = "PriceTaxes">$40.00</span>
                                     </td>
                                 </tr>
                             </tbody>
@@ -501,7 +479,7 @@
                                     </th>
                                     <td class="total-line__price">
                                         <span class="Par Value">USD</span>
-                                        <span class="PriceMount">
+                                        <span class="PriceMount" id="PriceSum">
                                             $440.00
                                         </span>
                                     </td>
@@ -524,7 +502,7 @@
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <!-- file normal & carousel -->
-    <script src="/src/js/index.js"></script>
+    <script src="/src/js/checkout.js"></script>
     <script src="/src/js/quickview.js"></script>
     <script src="/src/js/carousel.js"></script>
     <script src="/src/js/owl.carousel.min.js"></script>

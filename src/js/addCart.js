@@ -1,18 +1,15 @@
 $(document).ready(function () {
-  let index = 0
-  let idxPr = 0
-  let Cart = JSON.parse(sessionStorage.getItem("Cart"))
+ 
+  let Cart = JSON.parse(localStorage.getItem("Cart"))
   for (let i = 0; i < Cart.length; i++) {
     let productImage = Cart[i][0]
     let productName = Cart[i][1]
     let productPrice = parseInt(Cart[i][2].slice(1, 3))
     let productquantity = Cart[i][3]
 
-    showCartPage(productImage, productName, productPrice, productquantity, i)
+    showCartPage(productImage, productName, productPrice, productquantity)
   }
-
-  function showCartPage(productImage, productName, productPrice, productquantity, index) {
-
+  function showCartPage(productImage, productName, productPrice, productquantity) {
     let cartTable = document.querySelector("#mycart")
     let totalPrs = 0
     let priceProduct = productPrice * productquantity
@@ -41,7 +38,7 @@ $(document).ready(function () {
                         <span class="amountProduct">${priceProduct}</span>
                         </td>
                         <td class="product-remove">
-                        <a class="removeProduct" id="removeProduct-${index}" >
+                        <a class="removeProduct"  >
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-trash" viewBox="0 0 16 16">
                             <path
@@ -50,8 +47,7 @@ $(document).ready(function () {
                             d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
                           </svg></a>
                           </td>
-                          </tr>
-                          `
+                          </tr>`
     }
     else {
       return
@@ -79,7 +75,10 @@ $(document).ready(function () {
     let cartItem = document.querySelectorAll("#mycart .cart-item")
     for (let i = 0; i < cartItem.length; i++) {
       let inputValue = cartItem[i].querySelector("input")
+      console.log(parseInt(inputValue.value));
       inputValue.addEventListener("change", function () {
+        Cart[i][3] = parseInt(inputValue.value)
+        localStorage.setItem("Cart",JSON.stringify(Cart))
         cartTotal()
       })
     }
@@ -90,14 +89,13 @@ $(document).ready(function () {
     for (let i = 0; i < cartItem.length; i++) {
       productDel[i].addEventListener("click", function (e) {
           e.preventDefault()
-          if(Cart[i][1] === cartItem[i].children[1].children[0].textContent )
+          if(Cart[i][1] === cartItem[i].children[1].children[0].textContent)
           {
             cartItem[i].remove()
-            sessionStorage.removeItem(Cart[i])
-            console.log(Cart[i]);
+            localStorage.removeItem(Cart[i])
             delete Cart[i]
           }
-          sessionStorage.setItem("Cart",JSON.stringify(Cart)) 
+          localStorage.setItem("Cart",JSON.stringify(Cart)) 
           cartTotal()
       })
     }

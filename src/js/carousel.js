@@ -484,7 +484,6 @@ function renderPrSb(products) {
                         </div>
                         <!-- end of image -->
                         <!-- choose options product -->
-                       
                         <!-- end of options -->
                         <!-- name product -->
                         <p class="tabContent_item--name" data-name="${product.name}">

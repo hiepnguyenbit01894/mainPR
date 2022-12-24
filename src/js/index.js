@@ -33,59 +33,104 @@ $(document).ready(function () {
         bgcartBar.toggleClass('bgactive')
     })
     let btnAddtoCart = document.getElementsByClassName("addtocart")
-    console.log(btnAddtoCart);
     let Cart = new Array()
     for (let i = 0; i < btnAddtoCart.length; i++) {
         btnAddtoCart[i].addEventListener("click", (e) => {
-            let image= e.target.parentElement.parentElement.parentElement.children[0].children[0].src
+            let image = e.target.parentElement.parentElement.parentElement.children[0].children[0].src
             let name = e.target.parentElement.parentElement.parentElement.children[1].children[0].children[0].innerText
             let price = e.target.parentElement.parentElement.parentElement.children[1].children[1].innerText
-            let quantity =parseInt(e.target.parentElement.parentElement.parentElement.children[1].children[3].children[0].children[1].value)
-            let item = new Array(image,name,price,quantity )
+            let quantity = parseInt(e.target.parentElement.parentElement.parentElement.children[1].children[3].children[0].children[1].value)
+            let item = new Array(image, name, price, quantity)
             let check = 0 //flag to check 
-            for(let i = 0; i < Cart.length;i++)
-            {
-                if(Cart[i][1] == name)
-                {
+            for (let i = 0; i < Cart.length; i++) {
+                if (Cart[i][1] == name) {
                     check = 1
                     quantity += parseInt(Cart[i][3])
                     Cart[i][3] = quantity
                     break
                 }
-                
             }
-            if(check == 0)
-            {
+            if (check == 0) {
                 Cart.push(item)
             }
-            showCart()
-            // save product to sessionStorage
-            sessionStorage.setItem("Cart", JSON.stringify(Cart))
-            
+            showCart(Cart)
+            // save product to localStorage
+            localStorage.setItem("Cart", JSON.stringify(Cart))
         })
+
     }
-    function showCart(){
+    let Cartp = JSON.parse(localStorage.getItem("Cart"))
+    for (let i = 0; i < Cartp.length; i++) {
+        // let productImage = Cartp[i][0]
+        // let productName = Cartp[i][1]
+        // let productPrice = parseInt(Cartp[i][2].slice(1, 3))
+        // let productquantity = Cartp[i][3]
+
+        // showCartPage(productImage, productName, productPrice, productquantity)
+        showCart(Cartp)
+    }
+    // function showCartPage(productImage, productName, productPrice, productquantity) {
+    //     let html = ''
+    //     let totalPrs = 0
+    //     let priceProduct = parseInt(productPrice) *  productquantity
+    //         totalPrs += priceProduct
+    //     if (productName != undefined) {
+    //         html += `<div class="cart_body--product d-flex">
+    //         <div class="cart_product--image">
+    //         <img src="${productImage}" alt="">
+    //         </div>   
+    //         <div class="cart_product--infor">
+    //         <h3 class="product_infor--name iitem">
+    //             <a href="products/Banana.html">
+    //             ${ productName}
+    //             </a>
+    //         </h3>
+    //         <div class="product_infor--quantity iitem">
+    //             Qty: ${productquantity}
+    //         </div>
+    //         <div class="product_infor--price iitem">
+    //             <span> ${productPrice}</span>
+    //         </div>
+    //         <div class="product_infor--totalPrice iitem">
+    //         <span> Total :$${priceProduct}.00 USD</span>
+    //         </div>
+    //         </div>
+    //         <div class="cart_product--remove">
+    //         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+    //             <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+    //             <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+    //         </svg>
+    //         </div>
+    //     </div>`
+    //     }
+    //     else {
+    //         return 
+    //     }
+    //     document.querySelector('.cartBar_main--total .float-right').innerText = `$${totalPrs}.00`
+    //     document.querySelector('.cart_body--show').innerHTML = html
+    // }
+
+    function showCart(cp) {
         let html = ''
         let totalPrs = 0
-        for(let i =0; i< Cart.length;i++)
-        {
-            let priceProduct =  parseInt(Cart[i][2].slice(1,3)) *  Cart[i][3]
+        for (let i = 0; i < cp.length; i++) {
+            let priceProduct = parseInt(cp[i][2].slice(1, 3)) * cp[i][3]
             totalPrs += priceProduct
-            html  += `<div class="cart_body--product d-flex">
+            html += `<div class="cart_body--product d-flex">
                             <div class="cart_product--image">
-                            <img src="${Cart[i][0]}" alt="">
+                            <img src="${cp[i][0]}" alt="">
                             </div>   
                             <div class="cart_product--infor">
                             <h3 class="product_infor--name iitem">
                                 <a href="products/Banana.html">
-                                ${Cart[i][1]}
+                                ${cp[i][1]}
                                 </a>
                             </h3>
                             <div class="product_infor--quantity iitem">
-                                Qty: ${Cart[i][3]}
+                                Qty: ${cp[i][3]}
                             </div>
                             <div class="product_infor--price iitem">
-                                <span> ${Cart[i][2]}</span>
+                                <span> ${cp[i][2]}</span>
                             </div>
                             <div class="product_infor--totalPrice iitem">
                             <span> Total :$${priceProduct}.00 USD</span>
@@ -98,13 +143,10 @@ $(document).ready(function () {
                             </svg>
                             </div>
                         </div>`
-                        console.log();
         }
         document.querySelector('.cartBar_main--total .float-right').innerText = `$${totalPrs}.00`
         document.querySelector('.cart_body--show').innerHTML = html
     }
-   
-
 
     // =======================
     //toggle  headBar
@@ -265,7 +307,7 @@ $(document).ready(function () {
                 width: $(this).data("ori")
             }, 1000)
     })
-    })
-    $('#btntest').on('click', function () {
-        $('#exampleModalCenter').modal('show')
-      })
+})
+$('#btntest').on('click', function () {
+    $('#exampleModalCenter').modal('show')
+})
