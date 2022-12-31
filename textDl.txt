@@ -1,16 +1,3 @@
-- trang list toàn bộ sản phẩm (phân trang) (checked)
-- quickview (checked)
-- trang blog (checked)
-- trang đơn sản phẩm (checked)
-- trang đăng nhập, đăng ký (checked)
-- phần search filter(checked)
-+ thêm giỏ hàng (checked)
-+ update giỏ hàng(checked)
-+ thêm vào session storage (checked)
-+ render ra trang mới (checked)
-+ thêm thông báo khi add giỏ hàng thành công (tắt quickview khi thêm thành công)
-+ xóa sản phẩm(checked) 
-- gán link cho từng trang(checked)
-- làm trang checkout(checked)
-- xử lý thêm vào cart cho các trang khác 
-- xử lý trang checkout
+- chỉnh lại nút add cart checked
+- xóa wish list
+- thêm addcart vào mobile

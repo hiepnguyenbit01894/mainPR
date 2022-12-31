@@ -53,7 +53,7 @@
     color: $mainColor;
   }
 
-  .btn-addtocart {
+  .addtocart {
     background-color: $mainColor;
     padding: 12px 20px;
     border-radius: 5px;
@@ -387,7 +387,7 @@
 
       .input-group--main {
         @include flex-Jsaround;
-        @include inputForm
+        @include inputForm;
       }
     }
   }

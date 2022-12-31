@@ -1,5 +1,54 @@
 const productNewarrivals = [
   {
+    "id": 1,
+    "name": "Brocolli",
+    "price": 120,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/broccoli.jpg",
+    "category": "vegetables"
+  },
+  {
+    "id": 2,
+    "name": "Cauliflower",
+    "price": 60,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/cauliflower.jpg",
+    "category": "vegetables"
+  },
+  {
+    "id": 3,
+    "name": "Cucumber",
+    "price": 48,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/cucumber.jpg",
+    "category": "vegetables"
+  },
+  {
+    "id": 4,
+    "name": "Beetroot",
+    "price": 32,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/beetroot.jpg",
+    "category": "vegetables"
+  },
+  {
+    "id": 5,
+    "name": "Carrot",
+    "price": 56,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620046/dummy-products/carrots.jpg",
+    "category": "vegetables"
+  },
+  {
+    "id": 6,
+    "name": "Tomato",
+    "price": 16,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/tomato.jpg",
+    "category": "vegetables"
+  },
+  {
+    "id": 7,
+    "name": "Beans",
+    "price": 82,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/beans.jpg",
+    "category": "vegetables"
+  },
+  {
     "id": 8,
     "name": "Brinjal",
     "price": 35,
@@ -39,30 +88,7 @@ const productNewarrivals = [
     "category": "vegetables",
     "link": "http://127.0.0.1:5500/src/html/products/Pumpkin.html"
   },
-  {
-    "id": 13,
-    "name": "Corn",
-    "price": 75,
-    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/corn.jpg",
-    "category": "vegetables",
-    "link": "http://127.0.0.1:5500/src/html/products/Corn.html"
-  },
-  {
-    "id": 14,
-    "name": "Onion",
-    "price": 16,
-    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/onion.jpg",
-    "category": "vegetables",
-    "link": "http://127.0.0.1:5500/src/html/products/Onion.html"
-  },
-  {
-    "id": 15,
-    "name": "Apple",
-    "price": 72,
-    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/apple.jpg",
-    "category": "fruits",
-    "link": "http://127.0.0.1:5500/src/html/products/Apple.html"
-  },
+  
 ]
 renderPrn(productNewarrivals)
 function renderPrn(products) {
@@ -84,14 +110,6 @@ function renderPrn(products) {
                   </svg>
                 </a>
                 <span class="item_options--Title viewTitle" >View</span>
-                  </li>
-                  <li class="item_options addtowish" >
-                <a href="#!" class="item_options--logo"> 
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
-                  </svg>
-                </a>
-                <span class="item_options--Title wishTitle" >Add to WishList</span>
                   </li>
                   <li class="item_options infor" >
                 <a href="#!" class="item_options--logo">
@@ -116,6 +134,30 @@ function renderPrn(products) {
   $('.bestSeller_tabContent--a1 .row ').html(item)
 }
 const productBestSeller = [
+  {
+    "id": 13,
+    "name": "Corn",
+    "price": 75,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/corn.jpg",
+    "category": "vegetables",
+    "link": "http://127.0.0.1:5500/src/html/products/Corn.html"
+  },
+  {
+    "id": 14,
+    "name": "Onion",
+    "price": 16,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/onion.jpg",
+    "category": "vegetables",
+    "link": "http://127.0.0.1:5500/src/html/products/Onion.html"
+  },
+  {
+    "id": 15,
+    "name": "Apple",
+    "price": 72,
+    "image": "https://res.cloudinary.com/sivadass/image/upload/v1493620045/dummy-products/apple.jpg",
+    "category": "fruits",
+    "link": "http://127.0.0.1:5500/src/html/products/Apple.html"
+  },
   {
     "id": 16,
     "name": "Banana",
@@ -201,14 +243,6 @@ function renderPrb(products) {
                   </svg>
                 </a>
                 <span class="item_options--Title viewTitle" >View</span>
-                  </li>
-                  <li class="item_options addtowish" >
-                <a href="#!" class="item_options--logo"> 
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
-                  </svg>
-                </a>
-                <span class="item_options--Title wishTitle" >Add to WishList</span>
                   </li>
                   <li class="item_options infor" >
                 <a href="#!" class="item_options--logo">
