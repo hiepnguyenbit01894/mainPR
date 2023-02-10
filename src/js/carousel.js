@@ -122,7 +122,7 @@ function renderPrn(products) {
           </ul>
         </div>
         <h3 class="tabContent_item--name" >
-        <a href="${product.link}" class = "imgName">${product.name}</a>
+        <a href="#!" class = "imgName">${product.name}</a>
         </h3>
         <p class="tabContent_item--price">
         $${product.price}.00
@@ -255,7 +255,7 @@ function renderPrb(products) {
           </ul>
         </div>
         <h3 class="tabContent_item--name" >
-        <a href="${product.link}" class = "imgName">${product.name}</a>
+        <a href="#!" class = "imgName">${product.name}</a>
         </h3>
         <p class="tabContent_item--price">
         $${product.price}.00

@@ -1,3 +1,2 @@
-- chỉnh lại nút add cart checked
-- xóa wish list
 - thêm addcart vào mobile
+- thêm hiệu ứng scroll cho trang web
